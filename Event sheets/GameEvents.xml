@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>GameEvents</name>
+    <events>
+        <event-block any="1" sid="633952861782317">
+            <conditions>
+                <condition id="14" name="On tap" sid="219173140806191" type="Touch" />
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="225169290130398" type="Pombo">
+                    <param id="0" name="Object">poop</param>
+                    <param id="1" name="Layer">1</param>
+                    <param id="2" name="Image point">&quot;Cu&quot;</param>
+                </action>
+                <action behavior="Platform" id="9" name="Set vector Y" sid="395418024395772" type="Pombo">
+                    <param id="0" name="Vector Y">-20</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
