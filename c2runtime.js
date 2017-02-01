@@ -20498,7 +20498,8 @@ cr.getObjectRefTable = function () { return [
 	cr.system_object.prototype.acts.ResetGlobals,
 	cr.system_object.prototype.acts.RestartLayout,
 	cr.plugins_.Function.prototype.cnds.OnFunction,
-	cr.plugins_.Touch.prototype.cnds.OnHoldGesture,
+	cr.plugins_.Touch.prototype.cnds.IsInTouch,
+	cr.plugins_.Touch.prototype.cnds.OnTouchEnd,
 	cr.plugins_.Sprite.prototype.acts.SetWidth,
 	cr.plugins_.Sprite.prototype.acts.SetHeight
 ];};
