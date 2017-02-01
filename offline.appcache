@@ -1,5 +1,5 @@
 ﻿CACHE MANIFEST
-#1485956230
+#1485962984
 data.js
 c2runtime.js
 jquery-2.1.1.min.js
@@ -16,6 +16,7 @@ images/sidewalk.png
 images/poop-sheet0.png
 images/boundary-sheet0.png
 images/vultureface-sheet0.png
+media/audiobg.ogg
 icon-16.png
 icon-32.png
 icon-114.png

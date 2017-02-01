@@ -1,5 +1,5 @@
 ﻿{
-	"version": 1485956230,
+	"version": 1485962984,
 	"fileList": [
 		"data.js",
 		"c2runtime.js",
@@ -17,6 +17,7 @@
 		"images/poop-sheet0.png",
 		"images/boundary-sheet0.png",
 		"images/vultureface-sheet0.png",
+		"media/audiobg.ogg",
 		"icon-16.png",
 		"icon-32.png",
 		"icon-114.png",
