@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>GameEvents</name>
     <events>
+        <variable constant="0" name="force" sid="590755459158144" static="0" type="number">0</variable>
         <variable constant="0" name="score" sid="460518059738555" static="0" type="number">0</variable>
         <variable constant="0" name="gameover" sid="605712566048518" static="0" type="number">0</variable>
         <variable constant="0" name="love" sid="467086110885921" static="0" type="number">100</variable>
@@ -216,29 +217,6 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="981328875820698">
-            <conditions>
-                <condition id="13" name="On hold" sid="887097700813580" type="Touch" />
-            </conditions>
-            <actions>
-                <action id="-3" name="Create object" sid="873679992778313" type="System">
-                    <param id="0" name="Object to create">poop</param>
-                    <param id="1" name="Layer">&quot;Game&quot;</param>
-                    <param id="2" name="X">Pombo.X</param>
-                    <param id="3" name="Y">Pombo.Y</param>
-                </action>
-                <action id="-5" name="Set width" sid="357961113101290" type="poop">
-                    <param id="0" name="Width">50</param>
-                </action>
-                <action id="-6" name="Set height" sid="794882707142140" type="poop">
-                    <param id="0" name="Height">50</param>
-                </action>
-                <action id="0" name="Call function" sid="334986041101783" type="Function">
-                    <param id="0" name="Name">&quot;updatePoopSize&quot;</param>
-                    <param id="1" name="Parameter {n}"></param>
-                </action>
-            </actions>
-        </event-block>
         <event-block sid="866168408408080">
             <conditions>
                 <condition id="0" name="On function" sid="601371109984124" type="Function">
@@ -261,6 +239,40 @@
                 <action id="0" name="Call function" sid="275776888106836" type="Function">
                     <param id="0" name="Name">&quot;updateLove&quot;</param>
                     <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="221251789535016">
+            <conditions>
+                <condition id="2" name="Is in touch" sid="623917627185455" type="Touch" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="819715289471619" type="System">
+                    <param id="0" name="Variable">force</param>
+                    <param id="1" name="Value">force + 0.1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="981328875820698">
+            <conditions>
+                <condition id="1" name="On any touch end" sid="887097700813580" type="Touch" />
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="873679992778313" type="System">
+                    <param id="0" name="Object to create">poop</param>
+                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                    <param id="2" name="X">Pombo.X</param>
+                    <param id="3" name="Y">Pombo.Y</param>
+                </action>
+                <action id="-5" name="Set width" sid="357961113101290" type="poop">
+                    <param id="0" name="Width">force * 10</param>
+                </action>
+                <action id="-6" name="Set height" sid="794882707142140" type="poop">
+                    <param id="0" name="Height">force * 10</param>
+                </action>
+                <action id="-9" name="Set value" sid="336081662983152" type="System">
+                    <param id="0" name="Variable">force</param>
+                    <param id="1" name="Value">0</param>
                 </action>
             </actions>
         </event-block>
