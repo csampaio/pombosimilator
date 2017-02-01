@@ -148,6 +148,7 @@
                     <param id="0" name="Seconds">3</param>
                 </action>
                 <action id="-21" name="Reset global variables" sid="844980232319460" type="System" />
+                <action id="33" name="Stop all" sid="197164517827901" type="Audio" />
                 <action id="-26" name="Restart layout" sid="305446800194913" type="System" />
             </actions>
         </event-block>
