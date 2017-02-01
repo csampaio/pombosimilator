@@ -13,10 +13,49 @@
     </margins>
     <unbounded-scrolling>0</unbounded-scrolling>
     <layers>
+        <layer name="Sky" sid="748123855979711">
+            <initially-visible>1</initially-visible>
+            <background-color>51,255,255</background-color>
+            <transparent>1</transparent>
+            <parallax>
+                <x>1</x>
+                <y>1</y>
+            </parallax>
+            <zoom-rate>1</zoom-rate>
+            <opacity>1</opacity>
+            <force-own-texture>0</force-own-texture>
+            <global>0</global>
+            <use-render-cells>0</use-render-cells>
+            <blend-mode>0</blend-mode>
+            <effect-fallback>0</effect-fallback>
+            <instances>
+                <instance type="CityBG" uid="21">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>0</x>
+                        <y>0</y>
+                        <z>0</z>
+                        <width>1440</width>
+                        <height>480</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+            </instances>
+            <effects />
+        </layer>
         <layer name="Background" sid="8722530541249526">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
-            <transparent>0</transparent>
+            <transparent>1</transparent>
             <parallax>
                 <x>1</x>
                 <y>1</y>
@@ -39,7 +78,7 @@
                     <behavior-instances>
                         <behavior-instance type="Bullet">
                             <properties>
-                                <speed>-150</speed>
+                                <speed>0</speed>
                                 <acceleration>0</acceleration>
                                 <gravity>0</gravity>
                                 <bounce-off-solids>No</bounce-off-solids>
@@ -51,8 +90,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>0</x>
-                        <y>0</y>
+                        <x>-207</x>
+                        <y>-818</y>
                         <z>0</z>
                         <width>1198</width>
                         <height>643</height>
@@ -216,6 +255,49 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="City" uid="18">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>0</x>
+                        <y>273</y>
+                        <z>0</z>
+                        <width>1440</width>
+                        <height>207</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Sky" uid="19">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <hotspot>Top-left</hotspot>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="DestroyOutsideLayout" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>739</x>
+                        <y>15</y>
+                        <z>0</z>
+                        <width>74</width>
+                        <height>50</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
@@ -267,8 +349,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>520</x>
-                        <y>592</y>
+                        <x>495</x>
+                        <y>459</y>
                         <z>0</z>
                         <width>63</width>
                         <height>65</height>
@@ -312,7 +394,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>549</x>
-                        <y>576</y>
+                        <y>443</y>
                         <z>0</z>
                         <width>49</width>
                         <height>73</height>
@@ -330,35 +412,14 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Platform">
-                            <properties>
-                                <max-speed>500</max-speed>
-                                <acceleration>1500</acceleration>
-                                <deceleration>1500</deceleration>
-                                <jump-strength>50</jump-strength>
-                                <gravity>0</gravity>
-                                <max-fall-speed>1000</max-fall-speed>
-                                <double-jump>Disabled</double-jump>
-                                <jump-sustain>0</jump-sustain>
-                                <default-controls>Yes</default-controls>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Solid">
-                            <properties>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>349</x>
-                        <y>319</y>
+                        <x>192.850952148</x>
+                        <y>208</y>
                         <z>0</z>
-                        <width>48</width>
-                        <height>40</height>
+                        <width>34.909091949</width>
+                        <height>22.222221375</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -392,8 +453,8 @@
                         <x>547</x>
                         <y>932</y>
                         <z>0</z>
-                        <width>10</width>
-                        <height>10</height>
+                        <width>42</width>
+                        <height>42</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -419,7 +480,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>1027</x>
-                        <y>664</y>
+                        <y>500</y>
                         <z>0</z>
                         <width>2048</width>
                         <height>40</height>
@@ -448,7 +509,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>1023</x>
-                        <y>-23</y>
+                        <y>-75</y>
                         <z>0</z>
                         <width>2048</width>
                         <height>40</height>
@@ -493,8 +554,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-502</x>
-                        <y>750</y>
+                        <x>-534</x>
+                        <y>587</y>
                         <z>0</z>
                         <width>485</width>
                         <height>120</height>

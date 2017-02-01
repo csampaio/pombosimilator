@@ -141,8 +141,8 @@
                     <param id="0" name="Text">&quot;Love: &quot;&amp;love&amp;&quot;%&quot;</param>
                 </action>
                 <action id="-3" name="Set position" sid="776974434236029" type="gameoverText">
-                    <param id="0" name="X">0</param>
-                    <param id="1" name="Y">340</param>
+                    <param id="0" name="X">117.5</param>
+                    <param id="1" name="Y">180</param>
                 </action>
                 <action id="-16" name="Wait" sid="918248997685628" type="System">
                     <param id="0" name="Seconds">3</param>
@@ -290,5 +290,56 @@
                 </action>
             </actions>
         </event-block>
+        <event-group description="" sid="572691998521604" title="Background">
+            <sub-events>
+                <event-block sid="386415977786659">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="165182726221101" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="514123965278797" type="City">
+                            <param id="0" name="X">City.X-(dt*100)</param>
+                        </action>
+                        <action id="-1" name="Set X" sid="872817768933945" type="CityBG">
+                            <param id="0" name="X">CityBG.X-(dt*90)</param>
+                        </action>
+                        <action id="-1" name="Set X" sid="190227791306782" type="Sky">
+                            <param id="0" name="X">Sky.X-(dt*50)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="107722797444219">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="334595668869258" type="City">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="X co-ordinate">-720</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="339869155778413" type="City">
+                            <param id="0" name="X">0</param>
+                        </action>
+                        <action id="-1" name="Set X" sid="623935481198215" type="CityBG">
+                            <param id="0" name="X">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="297200088401728">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="955148409663028" type="System">
+                            <param id="0" name="Interval (seconds)">11</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="631263139240348" type="System">
+                            <param id="0" name="Object to create">Sky</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">725</param>
+                            <param id="3" name="Y">int(random(15,140))</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>
