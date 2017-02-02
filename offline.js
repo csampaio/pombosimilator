@@ -1,5 +1,5 @@
 ﻿{
-	"version": 1485987491,
+	"version": 1486007512,
 	"fileList": [
 		"data.js",
 		"c2runtime.js",
@@ -19,6 +19,8 @@
 		"images/sky.png",
 		"images/citybg.png",
 		"media/audiobg.ogg",
+		"media/cork.ogg",
+		"media/poopsplat.ogg",
 		"icon-16.png",
 		"icon-32.png",
 		"icon-114.png",
