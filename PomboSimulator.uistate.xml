@@ -10,8 +10,10 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="0">GameLayout</layout>
-        <event-sheet active="1" order="1">GameEvents</event-sheet>
+        <layout order="2">GameLayout</layout>
+        <layout order="0">HomeLayout</layout>
+        <event-sheet order="3">GameEvents</event-sheet>
+        <event-sheet active="1" order="1">HomeEvents</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -35,5 +37,10 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/poop/" />
         <folder expanded="1" path="animation-folder/Boundary/" />
         <folder expanded="1" path="animation-folder/vultureFace/" />
+        <folder expanded="1" path="animation-folder/Play/" />
+        <folder expanded="1" path="animation-folder/Sprite/" />
+        <folder expanded="1" path="animation-folder/Sprite2/" />
+        <folder expanded="1" path="animation-folder/Sound/" />
+        <folder expanded="1" path="animation-folder/Coco/" />
     </folders-expanded>
 </c2uistate>

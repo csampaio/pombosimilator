@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>HomeEvents</name>
+    <events>
+        <variable constant="0" name="sound" sid="537208764052673" static="0" type="text">on</variable>
+        <event-group description="" sid="239800774555664" title="Background2">
+            <sub-events>
+                <event-block sid="709976241506945">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="679712330203916" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="726918278933756" type="Sky">
+                            <param id="0" name="X">Sky.X-(dt*50)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="880839048585092">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="175109338712563" type="System">
+                            <param id="0" name="Interval (seconds)">4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="707838118246633" type="System">
+                            <param id="0" name="Object to create">Sky</param>
+                            <param id="1" name="Layer">0</param>
+                            <param id="2" name="X">725</param>
+                            <param id="3" name="Y">int(random(15,140))</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="868551453042717" title="Manager">
+            <sub-events>
+                <event-block sid="435705671429001">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="785749052883047" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="748460958587938" type="Audio">
+                            <param id="0" name="Audio file">dovesCooing</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;dovesCooing&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="363777749127543">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="678753025504835" type="Touch">
+                            <param id="0" name="Object">Play</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="801026517315734" type="System">
+                            <param id="0" name="Layout">GameLayout</param>
+                        </action>
+                        <action id="33" name="Stop all" sid="903631830588841" type="Audio" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="489310084912273">
+            <conditions>
+                <condition id="17" name="On tap object" sid="241527410659974" type="Touch">
+                    <param id="0" name="Object">Sound</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="111776150335703">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="209908438006535" type="System">
+                            <param id="0" name="Variable">sound</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;on&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="6" name="Stop" sid="766267638514605" type="Audio">
+                            <param id="0" name="Tag">&quot;dovesCooing&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="694687138128835" type="System">
+                            <param id="0" name="Seconds">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="219425531984192" type="System">
+                            <param id="0" name="Variable">sound</param>
+                            <param id="1" name="Value">&quot;off&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="243481497189430" type="Sound">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="804535681261991">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="131529709130183" type="System">
+                            <param id="0" name="Variable">sound</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;off&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="686894012074736" type="Audio">
+                            <param id="0" name="Audio file">dovesCooing</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">0</param>
+                            <param id="1" name="Tag (optional)">&quot;dovesCooing&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="951148271727464" type="System">
+                            <param id="0" name="Seconds">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="263011706999138" type="System">
+                            <param id="0" name="Variable">sound</param>
+                            <param id="1" name="Value">&quot;on&quot;</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="395527036638022" type="Sound">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

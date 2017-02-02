@@ -306,9 +306,6 @@
                             <param id="2" name="X">Pombo.X</param>
                             <param id="3" name="Y">Pombo.Y</param>
                         </action>
-                        <action behavior="Platform" id="9" name="Set vector Y" sid="878686352819564" type="Pombo">
-                            <param id="0" name="Vector Y">-60</param>
-                        </action>
                         <action id="0" name="Play" sid="917768271212496" type="Audio">
                             <param id="0" name="Audio file">cork</param>
                             <param id="2" name="Loop">0</param>

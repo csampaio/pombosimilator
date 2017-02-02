@@ -13,6 +13,7 @@
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
@@ -21,10 +22,7 @@
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
-        <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
-        <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
         <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
-        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
         <behavior author="Scirra" id="wrap" version="1">Wrap</behavior>
     </used-behaviors>
@@ -38,6 +36,7 @@
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
+    <first-layout>HomeLayout</first-layout>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
@@ -117,17 +116,6 @@
             <instance-variables>
                 <instance-variable comment="Altura de vôo" name="FlightHeight" sid="507412654831406" type="number" />
             </instance-variables>
-            <behaviors>
-                <behavior-type name="Platform" sid="942330948374802">
-                    <behavior id="Platform" />
-                </behavior-type>
-                <behavior-type name="BoundToLayout" sid="948289520976848">
-                    <behavior id="bound" />
-                </behavior-type>
-                <behavior-type name="ScrollTo" sid="396180868118120">
-                    <behavior id="scrollto" />
-                </behavior-type>
-            </behaviors>
             <animation-folder>
                 <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="857678655393240" speed="12">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
@@ -226,13 +214,84 @@
         <object-type name="flightHeightTxt" sid="280999219465417">
             <plugin id="Text" />
         </object-type>
+        <object-type name="Play" sid="984140244660216">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="892202005366572" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.509804" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite" sid="420450815644692">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="759054137182825" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.501285" original-source="E:\games\pombosimulator\Assets\buttons.jpg">
+                        <collision-poly>
+                            <point x="0.0330882" y="0.130435" />
+                            <point x="0.5" y="0.0434783" />
+                            <point x="0.955882" y="0.173913" />
+                            <point x="1" y="0.492754" />
+                            <point x="0.966912" y="0.869565" />
+                            <point x="0.5" y="0.971014" />
+                            <point x="0.0441176" y="0.826087" />
+                            <point x="0" y="0.492754" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite2" sid="984487067375686">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="669773458219374" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="E:\games\pombosimulator\Assets\background.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sound" sid="422291379305004">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="872905359426759" speed="0">
+                    <frame duration="1" hotspotX="0.458333" hotspotY="0.520833" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Coco" sid="641978253925856">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="662472118470295" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\games\pombosimulator\Assets\pombo_coco.png">
+                        <collision-poly>
+                            <point x="0.166667" y="0.166667" />
+                            <point x="0.5" y="0" />
+                            <point x="0.761905" y="0.238095" />
+                            <point x="0.97619" y="0.5" />
+                            <point x="0.904762" y="0.904762" />
+                            <point x="0.5" y="0.97619" />
+                            <point x="0.166667" y="0.833333" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Particles" sid="309375726141353">
+            <plugin id="Particles" />
+            <texture original-source="E:\games\pombosimulator\Assets\pombo_coco.png" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
+        <layout>HomeLayout.xml</layout>
         <layout>GameLayout.xml</layout>
+        <layout>Home.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>GameEvents.xml</event-sheet>
+        <event-sheet>HomeEvents.xml</event-sheet>
+        <event-sheet>Home.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Mouse" uid="5" />
@@ -261,6 +320,8 @@
         <file name="audioBG.ogg" />
         <file name="cork.ogg" />
         <file name="poopSplat.ogg" />
+        <file name="click.ogg" />
+        <file name="dovesCooing.ogg" />
     </sounds-folder>
     <music-folder />
     <files-folder>
