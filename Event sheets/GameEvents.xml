@@ -24,18 +24,8 @@
                     <param id="2" name="X">Pombo.X</param>
                     <param id="3" name="Y">Pombo.Y</param>
                 </action>
-            </actions>
-        </event-block>
-        <event-block sid="545481957351323">
-            <conditions>
-                <condition id="-1" name="Compare X" sid="966184426758242" type="Background">
-                    <param id="0" name="Comparison">2</param>
-                    <param id="1" name="X co-ordinate">-1 * (Background.Width - WindowWidth)</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-1" name="Set X" sid="227353552859657" type="Background">
-                    <param id="0" name="X">0</param>
+                <action behavior="Platform" id="9" name="Set vector Y" sid="878686352819564" type="Pombo">
+                    <param id="0" name="Vector Y">-60</param>
                 </action>
             </actions>
         </event-block>
@@ -69,8 +59,8 @@
                 <action id="-3" name="Create object" sid="108240580448497" type="System">
                     <param id="0" name="Object to create">People</param>
                     <param id="1" name="Layer">&quot;Game&quot;</param>
-                    <param id="2" name="X">520</param>
-                    <param id="3" name="Y">random(555,600)</param>
+                    <param id="2" name="X">680</param>
+                    <param id="3" name="Y">random(430,460)</param>
                 </action>
             </actions>
         </event-block>
@@ -84,8 +74,8 @@
                 <action id="-3" name="Create object" sid="531953592301300" type="System">
                     <param id="0" name="Object to create">People2</param>
                     <param id="1" name="Layer">&quot;Game&quot;</param>
-                    <param id="2" name="X">520</param>
-                    <param id="3" name="Y">random(555,600)</param>
+                    <param id="2" name="X">658</param>
+                    <param id="3" name="Y">random(430,460)</param>
                 </action>
             </actions>
         </event-block>
@@ -140,9 +130,8 @@
                 <action id="0" name="Set text" sid="903335553905348" type="loveText">
                     <param id="0" name="Text">&quot;Love: &quot;&amp;love&amp;&quot;%&quot;</param>
                 </action>
-                <action id="-3" name="Set position" sid="776974434236029" type="gameoverText">
-                    <param id="0" name="X">117.5</param>
-                    <param id="1" name="Y">180</param>
+                <action id="-15" name="Set visible" sid="776974434236029" type="gameoverText">
+                    <param id="0" name="Visibility">1</param>
                 </action>
                 <action id="-16" name="Wait" sid="918248997685628" type="System">
                     <param id="0" name="Seconds">3</param>
