@@ -157,6 +157,7 @@
                         <action id="-15" name="Set visible" sid="776974434236029" type="gameoverText">
                             <param id="0" name="Visibility">1</param>
                         </action>
+                        <action id="33" name="Stop all" sid="407831652568150" type="Audio" />
                         <action id="-16" name="Wait" sid="918248997685628" type="System">
                             <param id="0" name="Seconds">3</param>
                         </action>
@@ -196,6 +197,12 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="0" name="Play" sid="803350133756952" type="Audio">
+                            <param id="0" name="Audio file">poopSplat</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-5</param>
+                            <param id="1" name="Tag (optional)">&quot;poopSplat&quot;</param>
+                        </action>
                         <action id="-9" name="Set value" sid="174702286389019" type="System">
                             <param id="0" name="Variable">score</param>
                             <param id="1" name="Value">score + 10</param>
@@ -302,6 +309,12 @@
                         <action behavior="Platform" id="9" name="Set vector Y" sid="878686352819564" type="Pombo">
                             <param id="0" name="Vector Y">-60</param>
                         </action>
+                        <action id="0" name="Play" sid="917768271212496" type="Audio">
+                            <param id="0" name="Audio file">cork</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-5</param>
+                            <param id="1" name="Tag (optional)">&quot;cork&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="221251789535016">
@@ -336,6 +349,12 @@
                             <param id="0" name="Variable">force</param>
                             <param id="1" name="Value">0</param>
                         </action>
+                        <action id="0" name="Play" sid="961720816144999" type="Audio">
+                            <param id="0" name="Audio file">cork</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-5</param>
+                            <param id="1" name="Tag (optional)">&quot;cork&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
@@ -350,7 +369,7 @@
                         <action id="0" name="Play" sid="280207230938138" type="Audio">
                             <param id="0" name="Audio file">audioBG</param>
                             <param id="2" name="Loop">1</param>
-                            <param id="3" name="Volume">-10</param>
+                            <param id="3" name="Volume">-15</param>
                             <param id="1" name="Tag (optional)">&quot;&quot;</param>
                         </action>
                     </actions>

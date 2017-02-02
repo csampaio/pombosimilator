@@ -259,6 +259,8 @@
     </global-instances>
     <sounds-folder>
         <file name="audioBG.ogg" />
+        <file name="cork.ogg" />
+        <file name="poopSplat.ogg" />
     </sounds-folder>
     <music-folder />
     <files-folder>
