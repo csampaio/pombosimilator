@@ -114,6 +114,9 @@
         </object-type>
         <object-type name="Pombo" sid="158102355461404">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable comment="Altura de vôo" name="FlightHeight" sid="507412654831406" type="number" />
+            </instance-variables>
             <behaviors>
                 <behavior-type name="Platform" sid="942330948374802">
                     <behavior id="Platform" />
@@ -219,6 +222,9 @@
         <object-type name="CityBG" sid="174243564709429">
             <plugin id="TiledBg" />
             <texture original-source="C:\developer\game\pombosimulator\Assets\bg_city.png" />
+        </object-type>
+        <object-type name="flightHeightTxt" sid="280999219465417">
+            <plugin id="Text" />
         </object-type>
     </object-folder>
     <families />
