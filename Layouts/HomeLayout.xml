@@ -4,7 +4,7 @@
     <sid>629482454423073</sid>
     <event-sheet>HomeEvents</event-sheet>
     <size>
-        <width>900</width>
+        <width>720</width>
         <height>480</height>
     </size>
     <margins>
@@ -278,10 +278,14 @@
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
-                        <behavior-instance type="DestroyOutsideLayout" />
                         <behavior-instance type="Solid">
                             <properties>
                                 <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Wrap">
+                            <properties>
+                                <wrap-to>Layout</wrap-to>
                             </properties>
                         </behavior-instance>
                     </behavior-instances>

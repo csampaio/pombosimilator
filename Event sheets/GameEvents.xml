@@ -448,19 +448,6 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="841684406114868">
-                    <conditions>
-                        <condition id="0" name="On collision with another object" sid="586621443664270" type="Pombo">
-                            <param id="0" name="Object">People2</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="965394493462954" type="Function">
-                            <param id="0" name="Name">&quot;gameover&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                    </actions>
-                </event-block>
             </sub-events>
         </event-group>
         <event-group description="" sid="931405705820213" title="Game Manager">

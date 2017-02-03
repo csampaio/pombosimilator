@@ -822,11 +822,11 @@
                 <behavior-type name="Bullet" sid="118437560476399">
                     <behavior id="Bullet" />
                 </behavior-type>
-                <behavior-type name="DestroyOutsideLayout" sid="848072482400692">
-                    <behavior id="destroy" />
-                </behavior-type>
                 <behavior-type name="Solid" sid="768080143874264">
                     <behavior id="solid" />
+                </behavior-type>
+                <behavior-type name="Wrap" sid="835260818768617">
+                    <behavior id="wrap" />
                 </behavior-type>
             </behaviors>
             <animation-folder>
