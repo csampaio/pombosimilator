@@ -636,6 +636,9 @@
                         <action id="-15" name="Set visible" sid="477540509720577" type="Menu">
                             <param id="0" name="Visibility">1</param>
                         </action>
+                        <action id="-15" name="Set visible" sid="939376800961350" type="PauseBtn">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="623177505733158">
@@ -645,6 +648,15 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="5" name="Set frame" sid="419158649571040" type="PauseBtn">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="595802792492212" type="System">
+                            <param id="0" name="Seconds">0.3</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="708870629885946" type="PauseBtn">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
                         <action id="-13" name="Set time scale" sid="385396364104038" type="System">
                             <param id="0" name="Time scale">0</param>
                         </action>
@@ -673,6 +685,9 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="5" name="Set frame" sid="874105700860461" type="PlayBtn">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
                         <action id="-15" name="Set visible" sid="310667466730867" type="PauseBtn">
                             <param id="0" name="Visibility">1</param>
                         </action>
@@ -687,6 +702,12 @@
                         </action>
                         <action id="-13" name="Set time scale" sid="880798118320670" type="System">
                             <param id="0" name="Time scale">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="936135023716678" type="System">
+                            <param id="0" name="Seconds">0.3</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="418574378230120" type="PlayBtn">
+                            <param id="0" name="Frame number">0</param>
                         </action>
                         <action id="22" name="Set paused" sid="504835558313982" type="Audio">
                             <param id="0" name="Tag">&quot;PassinhoPombo&quot;</param>
@@ -706,11 +727,17 @@
                 <action id="5" name="Set frame" sid="779244155368672" type="MenuBtn">
                     <param id="0" name="Frame number">1</param>
                 </action>
-                <action id="-2" name="Go to layout" sid="273242009768658" type="System">
-                    <param id="0" name="Layout">HomeLayout</param>
-                </action>
                 <action id="-13" name="Set time scale" sid="242101102824606" type="System">
                     <param id="0" name="Time scale">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="234934564483121" type="System">
+                    <param id="0" name="Seconds">0.3</param>
+                </action>
+                <action id="5" name="Set frame" sid="794725999444844" type="MenuBtn">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="273242009768658" type="System">
+                    <param id="0" name="Layout">HomeLayout</param>
                 </action>
             </actions>
         </event-block>
@@ -724,11 +751,17 @@
                 <action id="5" name="Set frame" sid="988168947174641" type="Menu">
                     <param id="0" name="Frame number">1</param>
                 </action>
-                <action id="-2" name="Go to layout" sid="160176348465290" type="System">
-                    <param id="0" name="Layout">HomeLayout</param>
-                </action>
                 <action id="-13" name="Set time scale" sid="803559617760168" type="System">
                     <param id="0" name="Time scale">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="841945087203368" type="System">
+                    <param id="0" name="Seconds">0.3</param>
+                </action>
+                <action id="5" name="Set frame" sid="642842455092427" type="Menu">
+                    <param id="0" name="Frame number">0</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="160176348465290" type="System">
+                    <param id="0" name="Layout">HomeLayout</param>
                 </action>
             </actions>
         </event-block>
@@ -744,6 +777,12 @@
                 </action>
                 <action id="5" name="Set frame" sid="559753124198234" type="Restart">
                     <param id="0" name="Frame number">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="787109457519283" type="System">
+                    <param id="0" name="Seconds">0.3</param>
+                </action>
+                <action id="5" name="Set frame" sid="774647627216560" type="Restart">
+                    <param id="0" name="Frame number">0</param>
                 </action>
                 <action id="-21" name="Reset global variables" sid="539434247523727" type="System" />
                 <action id="-26" name="Restart layout" sid="168707016100331" type="System" />
