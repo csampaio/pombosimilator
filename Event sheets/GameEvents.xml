@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>GameEvents</name>
     <events>
+        <variable constant="0" name="PeopleType" sid="866596020288915" static="0" type="number">0</variable>
         <variable constant="0" name="restartTime" sid="138901636961189" static="0" type="number">0</variable>
         <variable constant="0" name="poopEnergyCost" sid="797372990087773" static="0" type="number">5</variable>
         <variable constant="0" name="multiplicadorEnergia" sid="870005369042965" static="0" type="number">5</variable>
@@ -28,20 +29,6 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="429128701828978">
-                    <conditions>
-                        <condition id="0" name="On collision with another object" sid="662342257100558" type="poop">
-                            <param id="0" name="Object">People2</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Destroy" sid="758023317714392" type="People2" />
-                        <action id="0" name="Call function" sid="724169798435474" type="Function">
-                            <param id="0" name="Name">&quot;peopleCollision&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                    </actions>
-                </event-block>
                 <event-block sid="833678430798580">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="250730757395323" type="People">
@@ -52,16 +39,6 @@
                         <action id="-9" name="Destroy" sid="289058542035801" type="People" />
                     </actions>
                 </event-block>
-                <event-block sid="254360034364277">
-                    <conditions>
-                        <condition id="0" name="On collision with another object" sid="749458999122950" type="People2">
-                            <param id="0" name="Object">Boundary</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Destroy" sid="333767269823728" type="People2" />
-                    </actions>
-                </event-block>
                 <event-block sid="199238576474470">
                     <conditions>
                         <condition id="-6" name="Every X seconds" sid="302700945280947" type="System">
@@ -69,28 +46,79 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="-9" name="Set value" sid="984081906611843" type="System">
+                            <param id="0" name="Variable">PeopleType</param>
+                            <param id="1" name="Value">int(random(0,5))</param>
+                        </action>
                         <action id="-3" name="Create object" sid="108240580448497" type="System">
                             <param id="0" name="Object to create">People</param>
                             <param id="1" name="Layer">&quot;Game&quot;</param>
                             <param id="2" name="X">720</param>
-                            <param id="3" name="Y">random(420,445)</param>
+                            <param id="3" name="Y">random(380,428)</param>
                         </action>
                     </actions>
-                </event-block>
-                <event-block sid="917642985822868">
-                    <conditions>
-                        <condition id="-6" name="Every X seconds" sid="777618350999844" type="System">
-                            <param id="0" name="Interval (seconds)">random(1,3)</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-3" name="Create object" sid="531953592301300" type="System">
-                            <param id="0" name="Object to create">People2</param>
-                            <param id="1" name="Layer">&quot;Game&quot;</param>
-                            <param id="2" name="X">720</param>
-                            <param id="3" name="Y">random(420,445)</param>
-                        </action>
-                    </actions>
+                    <sub-events>
+                        <event-block sid="526660541091119">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="498360856768187" type="System">
+                                    <param id="0" name="Variable">PeopleType</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="538177076187378" type="People">
+                                    <param id="0" name="Animation">&quot;Beard&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="574159929439846">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="178657273789757" type="System">
+                                    <param id="0" name="Variable">PeopleType</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="900482466436533" type="People">
+                                    <param id="0" name="Animation">&quot;Cop&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="965542495030528">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="708240699430189" type="System">
+                                    <param id="0" name="Variable">PeopleType</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="608703014240376" type="People">
+                                    <param id="0" name="Animation">&quot;Green&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="993280042862854">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="114834279839955" type="System">
+                                    <param id="0" name="Variable">PeopleType</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="915744645336514" type="People">
+                                    <param id="0" name="Animation">&quot;Muleke&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
