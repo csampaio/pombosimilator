@@ -1,5 +1,5 @@
 ﻿{
-	"version": 1486141752,
+	"version": 1486143990,
 	"fileList": [
 		"data.js",
 		"c2runtime.js",
@@ -14,7 +14,6 @@
 		"images/sidewalk.png",
 		"images/poop-sheet0.png",
 		"images/boundary-sheet0.png",
-		"images/vultureface-sheet0.png",
 		"images/city.png",
 		"images/sky.png",
 		"images/citybg.png",
@@ -42,6 +41,10 @@
 		"images/menubtn-sheet1.png",
 		"images/pausebtn-sheet0.png",
 		"images/pausebtn-sheet1.png",
+		"images/lovebar-sheet0.png",
+		"images/vulture-sheet0.png",
+		"images/vulture-sheet1.png",
+		"images/vulture-sheet2.png",
 		"media/audiobg.ogg",
 		"media/cork.ogg",
 		"media/poopsplat.ogg",
