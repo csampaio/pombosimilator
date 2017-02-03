@@ -285,40 +285,52 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="372821156585169">
+                <event-block sid="821380089514199">
                     <conditions>
-                        <condition id="5" inverted="1" name="Is tag playing" sid="479089860574629" type="Audio">
-                            <param id="0" name="Tag">&quot;LowEnergy&quot;</param>
-                        </condition>
-                        <condition id="-14" name="Compare variable" sid="851412007553949" type="System">
-                            <param id="0" name="Variable">energy</param>
-                            <param id="1" name="Comparison">3</param>
-                            <param id="2" name="Value">LowEnergyRate</param>
+                        <condition id="-14" name="Compare variable" sid="827196082268929" type="System">
+                            <param id="0" name="Variable">gameover</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="0" name="Play" sid="530334275438205" type="Audio">
-                            <param id="0" name="Audio file">Siren_Noise-KevanGC-1337458893</param>
-                            <param id="2" name="Loop">1</param>
-                            <param id="3" name="Volume">-10</param>
-                            <param id="1" name="Tag (optional)">&quot;LowEnergy&quot;</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="761909693217716">
-                    <conditions>
-                        <condition id="-22" name="Else" sid="208581734887830" type="System" />
-                        <condition id="-14" name="Compare variable" sid="994825396076144" type="System">
-                            <param id="0" name="Variable">energy</param>
-                            <param id="1" name="Comparison">4</param>
-                            <param id="2" name="Value">LowEnergyRate + 1</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="6" name="Stop" sid="616087493642740" type="Audio">
-                            <param id="0" name="Tag">&quot;LowEnergy&quot;</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="372821156585169">
+                            <conditions>
+                                <condition id="5" inverted="1" name="Is tag playing" sid="479089860574629" type="Audio">
+                                    <param id="0" name="Tag">&quot;LowEnergy&quot;</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="851412007553949" type="System">
+                                    <param id="0" name="Variable">energy</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">LowEnergyRate</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="530334275438205" type="Audio">
+                                    <param id="0" name="Audio file">Siren_Noise-KevanGC-1337458893</param>
+                                    <param id="2" name="Loop">1</param>
+                                    <param id="3" name="Volume">-10</param>
+                                    <param id="1" name="Tag (optional)">&quot;LowEnergy&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="761909693217716">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="208581734887830" type="System" />
+                                <condition id="-14" name="Compare variable" sid="994825396076144" type="System">
+                                    <param id="0" name="Variable">energy</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">LowEnergyRate + 1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="6" name="Stop" sid="616087493642740" type="Audio">
+                                    <param id="0" name="Tag">&quot;LowEnergy&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
@@ -371,38 +383,6 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="682567091134640">
-                    <conditions>
-                        <condition id="0" name="On function" sid="745772046266065" type="Function">
-                            <param id="0" name="Name">&quot;gameover&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Destroy" sid="666094573599431" type="Pombo" />
-                        <action id="-9" name="Set value" sid="506680388378725" type="System">
-                            <param id="0" name="Variable">gameover</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="114397257253704" type="System">
-                            <param id="0" name="Variable">energy</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="0" name="Call function" sid="626396478607584" type="Function">
-                            <param id="0" name="Name">&quot;updateEnergy&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="747322249365482" type="gameoverText">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="33" name="Stop all" sid="845392536324071" type="Audio" />
-                        <action id="-16" name="Wait" sid="636475288541869" type="System">
-                            <param id="0" name="Seconds">restartTime</param>
-                        </action>
-                        <action id="-21" name="Reset global variables" sid="899005500977888" type="System" />
-                        <action id="33" name="Stop all" sid="423696845252106" type="Audio" />
-                        <action id="-26" name="Restart layout" sid="283475400458139" type="System" />
-                    </actions>
-                </event-block>
             </sub-events>
         </event-group>
         <event-group description="" sid="348564989243525" title="Player">
@@ -421,20 +401,14 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="633952861782317">
-                    <conditions>
-                        <condition id="14" name="On tap" sid="219173140806191" type="Touch" />
-                        <condition id="-14" name="Compare variable" sid="665340431660963" type="System">
-                            <param id="0" name="Variable">gameover</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                </event-block>
                 <event-block sid="221251789535016">
                     <conditions>
                         <condition id="2" name="Is in touch" sid="623917627185455" type="Touch" />
+                        <condition id="-8" name="Compare two values" sid="689680693370329" type="System">
+                            <param id="0" name="First value">timescale</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">1</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="-9" name="Set value" sid="819715289471619" type="System">
@@ -476,6 +450,11 @@
                 <event-block sid="775308499082795">
                     <conditions>
                         <condition id="0" name="On any touch start" sid="974511081765677" type="Touch" />
+                        <condition id="-8" name="Compare two values" sid="642688217588694" type="System">
+                            <param id="0" name="First value">timescale</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">1</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="-3" name="Create object" sid="873679992778313" type="System">
@@ -497,6 +476,11 @@
                 <event-block sid="981328875820698">
                     <conditions>
                         <condition id="1" name="On any touch end" sid="887097700813580" type="Touch" />
+                        <condition id="-8" name="Compare two values" sid="370165578266786" type="System">
+                            <param id="0" name="First value">timescale</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">1</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="-9" name="Set value" sid="203674096290584" type="System">
@@ -620,9 +604,6 @@
                         <action id="-5" name="Set width" sid="626396478607584" type="loveBar">
                             <param id="0" name="Width">0</param>
                         </action>
-                        <action id="0" name="Set text" sid="591889244912227" type="loveText">
-                            <param id="0" name="Text">&quot;Love: &quot;&amp;energy&amp;&quot;%&quot;</param>
-                        </action>
                         <action id="33" name="Stop all" sid="845392536324071" type="Audio" />
                         <action id="-13" name="Set time scale" sid="673574751674531" type="System">
                             <param id="0" name="Time scale">0</param>
@@ -646,6 +627,7 @@
                         <condition id="17" name="On tap object" sid="893896591042111" type="Touch">
                             <param id="0" name="Object">PauseBtn</param>
                         </condition>
+                        <condition id="-9" name="Is visible" sid="773586747514072" type="PauseBtn" />
                     </conditions>
                     <actions>
                         <action id="5" name="Set frame" sid="419158649571040" type="PauseBtn">
@@ -683,6 +665,7 @@
                         <condition id="17" name="On tap object" sid="691216272633473" type="Touch">
                             <param id="0" name="Object">PlayBtn</param>
                         </condition>
+                        <condition id="-9" name="Is visible" sid="279825578101708" type="PlayBtn" />
                     </conditions>
                     <actions>
                         <action id="5" name="Set frame" sid="874105700860461" type="PlayBtn">
@@ -722,6 +705,7 @@
                 <condition id="17" name="On tap object" sid="619126637534974" type="Touch">
                     <param id="0" name="Object">MenuBtn</param>
                 </condition>
+                <condition id="-9" name="Is visible" sid="168691326425453" type="MenuBtn" />
             </conditions>
             <actions>
                 <action id="5" name="Set frame" sid="779244155368672" type="MenuBtn">
@@ -746,6 +730,7 @@
                 <condition id="17" name="On tap object" sid="966831526329932" type="Touch">
                     <param id="0" name="Object">Menu</param>
                 </condition>
+                <condition id="-9" name="Is visible" sid="786684544555363" type="Menu" />
             </conditions>
             <actions>
                 <action id="5" name="Set frame" sid="988168947174641" type="Menu">
@@ -754,12 +739,10 @@
                 <action id="-13" name="Set time scale" sid="803559617760168" type="System">
                     <param id="0" name="Time scale">1</param>
                 </action>
-                <action id="-16" name="Wait" sid="841945087203368" type="System">
-                    <param id="0" name="Seconds">0.3</param>
-                </action>
                 <action id="5" name="Set frame" sid="642842455092427" type="Menu">
                     <param id="0" name="Frame number">0</param>
                 </action>
+                <action id="-21" name="Reset global variables" sid="708480335469637" type="System" />
                 <action id="-2" name="Go to layout" sid="160176348465290" type="System">
                     <param id="0" name="Layout">HomeLayout</param>
                 </action>
@@ -770,6 +753,7 @@
                 <condition id="17" name="On tap object" sid="505822595603991" type="Touch">
                     <param id="0" name="Object">Restart</param>
                 </condition>
+                <condition id="-9" name="Is visible" sid="875899246834657" type="Restart" />
             </conditions>
             <actions>
                 <action id="-13" name="Set time scale" sid="340220468220268" type="System">
@@ -777,9 +761,6 @@
                 </action>
                 <action id="5" name="Set frame" sid="559753124198234" type="Restart">
                     <param id="0" name="Frame number">1</param>
-                </action>
-                <action id="-16" name="Wait" sid="787109457519283" type="System">
-                    <param id="0" name="Seconds">0.3</param>
                 </action>
                 <action id="5" name="Set frame" sid="774647627216560" type="Restart">
                     <param id="0" name="Frame number">0</param>

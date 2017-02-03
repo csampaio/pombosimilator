@@ -340,7 +340,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="GameOverPanel" uid="31">
+                <instance type="GameOverPanel" uid="5">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -358,33 +358,6 @@
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="gameoverText" uid="11">
-                    <properties>
-                        <text>GAME OVER</text>
-                        <initial-visibility>Invisible</initial-visibility>
-                        <font>Arial Black,-48,900,0</font>
-                        <color>255,204,0</color>
-                        <horizontal-alignment>Center</horizontal-alignment>
-                        <vertical-alignment>Center</vertical-alignment>
-                        <hotspot>Top-left</hotspot>
-                        <wrapping>Word</wrapping>
-                        <line-height>0</line-height>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>117.5</x>
-                        <y>180</y>
-                        <z>0</z>
-                        <width>485</width>
-                        <height>120</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -541,7 +514,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="PausePanel" uid="2">
+                <instance type="PausePanel" uid="6">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -563,7 +536,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Restart" uid="32">
+                <instance type="Restart" uid="13">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
                         <initial-animation>Default</initial-animation>

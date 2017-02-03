@@ -517,9 +517,6 @@
         <object-type name="loveBar" sid="458019400609177">
             <plugin id="progressbar" />
         </object-type>
-        <object-type name="gameoverText" sid="561024002081152">
-            <plugin id="Text" />
-        </object-type>
         <object-type name="scoreText" sid="430417700957792">
             <plugin id="Text" />
         </object-type>
