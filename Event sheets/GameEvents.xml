@@ -141,9 +141,6 @@
                             <param id="0" name="Variable">energy</param>
                             <param id="1" name="Value">energy - decrementEnergyRate</param>
                         </action>
-                        <action id="-5" name="Set width" sid="507368876590584" type="loveBar">
-                            <param id="0" name="Width">energy</param>
-                        </action>
                         <action id="0" name="Call function" sid="361314712385117" type="Function">
                             <param id="0" name="Name">&quot;updateEnergy&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
@@ -200,6 +197,9 @@
                     <actions>
                         <action id="0" name="Set text" sid="314290195765995" type="loveText">
                             <param id="0" name="Text">&quot;Energy: &quot;&amp;energy&amp;&quot;%&quot;</param>
+                        </action>
+                        <action id="-5" name="Set width" sid="649732580290671" type="energyBar2">
+                            <param id="0" name="Width">energy</param>
                         </action>
                     </actions>
                 </event-block>
@@ -349,8 +349,9 @@
                             <param id="0" name="Variable">energy</param>
                             <param id="1" name="Value">0</param>
                         </action>
-                        <action id="-5" name="Set width" sid="626396478607584" type="loveBar">
-                            <param id="0" name="Width">0</param>
+                        <action id="0" name="Call function" sid="626396478607584" type="Function">
+                            <param id="0" name="Name">&quot;updateEnergy&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
                         </action>
                         <action id="0" name="Set text" sid="591889244912227" type="loveText">
                             <param id="0" name="Text">&quot;Love: &quot;&amp;energy&amp;&quot;%&quot;</param>
