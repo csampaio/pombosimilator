@@ -131,9 +131,12 @@
                 </behavior-type>
             </behaviors>
             <animation-folder>
-                <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="857678655393240" speed="12">
+                <animation framecount="5" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="857678655393240" speed="12">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.506024" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.506024" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.506024" hotspotY="0.5" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -210,7 +213,7 @@
         </object-type>
         <object-type name="City" sid="435802925593487">
             <plugin id="TiledBg" />
-            <texture original-source="C:\developer\game\pombosimulator\Assets\parallax_city.png" />
+            <texture original-source="E:\games\pombosimulator\Assets\parallax_city.png" />
         </object-type>
         <object-type name="Sky" sid="477012726789233">
             <plugin id="TiledBg" />
@@ -231,8 +234,31 @@
         <object-type name="Play" sid="984140244660216">
             <plugin id="Sprite" />
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="892202005366572" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.509804" />
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="892202005366572" speed="0">
+                    <frame duration="1" hotspotX="0.504274" hotspotY="0.509091" original-source="E:\games\pombosimulator\Assets\BOTAO_PLAY_livre.png">
+                        <collision-poly>
+                            <point x="0.017094" y="0.0363636" />
+                            <point x="0.495726" y="0" />
+                            <point x="0.974359" y="0.0545455" />
+                            <point x="1" y="0.490909" />
+                            <point x="0.982906" y="0.963636" />
+                            <point x="0.495726" y="1" />
+                            <point x="0.017094" y="0.963636" />
+                            <point x="0" y="0.490909" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.504274" hotspotY="0.509091" original-source="E:\games\pombosimulator\Assets\BOTAO_PLAY_off.png">
+                        <collision-poly>
+                            <point x="0.017094" y="0.0363636" />
+                            <point x="0.495726" y="0" />
+                            <point x="0.974359" y="0.0545455" />
+                            <point x="1" y="0.490909" />
+                            <point x="0.982906" y="0.963636" />
+                            <point x="0.495726" y="1" />
+                            <point x="0.017094" y="0.963636" />
+                            <point x="0" y="0.490909" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -259,7 +285,7 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="669773458219374" speed="5">
-                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="E:\games\pombosimulator\Assets\background.png" />
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="E:\games\pombosimulator\Assets\tela_inicio_POMBO_SIMULATOR.png" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -300,9 +326,84 @@
             <instance-variables>
                 <instance-variable comment="Altura de vôo" name="FlightHeight" sid="409754613913823" type="number" />
             </instance-variables>
+            <behaviors>
+                <behavior-type name="Bullet" sid="118437560476399">
+                    <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="DestroyOutsideLayout" sid="848072482400692">
+                    <behavior id="destroy" />
+                </behavior-type>
+                <behavior-type name="Solid" sid="768080143874264">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
-                <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="410932965411041" speed="12">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                <animation framecount="3" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="410932965411041" speed="12">
+                    <frame duration="1" hotspotX="0.506024" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.506024" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.506024" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite3" sid="235189795493955">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="277553644435496" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\games\pombosimulator\Assets\MARCA_POMBO_SIMULATOR_TELA_INICIAL.png">
+                        <collision-poly>
+                            <point x="0.245" y="0.337931" />
+                            <point x="0.5" y="0.00689655" />
+                            <point x="0.7475" y="0.348276" />
+                            <point x="0.99" y="0.5" />
+                            <point x="0.96" y="0.944828" />
+                            <point x="0.5" y="0.996552" />
+                            <point x="0.0275" y="0.962069" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Credito" sid="599337050416202">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="772916198486275" speed="0">
+                    <frame duration="1" hotspotX="0.504274" hotspotY="0.509091" original-source="E:\games\pombosimulator\Assets\BOTAO_CREDTIS_livre.png">
+                        <collision-poly>
+                            <point x="0.017094" y="0.0363636" />
+                            <point x="0.495726" y="0" />
+                            <point x="0.974359" y="0.0545455" />
+                            <point x="1" y="0.490909" />
+                            <point x="0.982906" y="0.963636" />
+                            <point x="0.495726" y="1" />
+                            <point x="0.017094" y="0.963636" />
+                            <point x="0" y="0.490909" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.504274" hotspotY="0.509091" original-source="E:\games\pombosimulator\Assets\BOTAO_CREDITS_off.png">
+                        <collision-poly>
+                            <point x="0.017094" y="0.0363636" />
+                            <point x="0.495726" y="0" />
+                            <point x="0.974359" y="0.0545455" />
+                            <point x="1" y="0.490909" />
+                            <point x="0.982906" y="0.963636" />
+                            <point x="0.495726" y="1" />
+                            <point x="0.017094" y="0.963636" />
+                            <point x="0" y="0.490909" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Colisao" sid="666473862842686">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Solid" sid="718875483830227">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="656074796016121" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>

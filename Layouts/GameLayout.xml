@@ -77,10 +77,10 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>0</x>
-                        <y>273</y>
+                        <y>180</y>
                         <z>0</z>
                         <width>1440</width>
-                        <height>207</height>
+                        <height>299</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
