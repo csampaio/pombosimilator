@@ -389,7 +389,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="loveText" uid="12">
+                <instance type="energyText" uid="12">
                     <properties>
                         <text>Energy: 100%</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -404,8 +404,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>52</x>
-                        <y>8.298000336</y>
+                        <x>58</x>
+                        <y>10</y>
                         <z>0</z>
                         <width>116</width>
                         <height>28</height>
@@ -458,8 +458,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>11.44263649</x>
-                        <y>86.589302063</y>
+                        <x>2</x>
+                        <y>-56</y>
                         <z>0</z>
                         <width>200</width>
                         <height>30</height>
@@ -497,7 +497,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="energyBar2" uid="32">
+                <instance type="energyBar" uid="32">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>

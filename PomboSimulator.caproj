@@ -663,7 +663,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="loveText" sid="768476557756672">
+        <object-type name="energyText" sid="768476557756672">
             <plugin id="Text" />
         </object-type>
         <object-type name="loveBar" sid="458019400609177">
@@ -986,7 +986,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="energyBar2" sid="409894801914642">
+        <object-type name="energyBar" sid="409894801914642">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="141332206723263" speed="5">

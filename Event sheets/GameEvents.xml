@@ -197,10 +197,10 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Set text" sid="314290195765995" type="loveText">
+                        <action id="0" name="Set text" sid="314290195765995" type="energyText">
                             <param id="0" name="Text">&quot;Energy: &quot;&amp;energy&amp;&quot;%&quot;</param>
                         </action>
-                        <action id="-5" name="Set width" sid="649732580290671" type="energyBar2">
+                        <action id="-5" name="Set width" sid="649732580290671" type="energyBar">
                             <param id="0" name="Width">energy</param>
                         </action>
                     </actions>
@@ -354,9 +354,6 @@
                         <action id="0" name="Call function" sid="626396478607584" type="Function">
                             <param id="0" name="Name">&quot;updateEnergy&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
-                        </action>
-                        <action id="0" name="Set text" sid="591889244912227" type="loveText">
-                            <param id="0" name="Text">&quot;Love: &quot;&amp;energy&amp;&quot;%&quot;</param>
                         </action>
                         <action id="-15" name="Set visible" sid="747322249365482" type="gameoverText">
                             <param id="0" name="Visibility">1</param>
