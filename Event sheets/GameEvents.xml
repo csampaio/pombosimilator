@@ -3,11 +3,13 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>GameEvents</name>
     <events>
+        <variable constant="0" name="multiplicadorEnergia" sid="870005369042965" static="0" type="number">5</variable>
+        <variable constant="0" name="tempEnergy" sid="740077366283890" static="0" type="number">0</variable>
         <variable constant="0" name="force" sid="590755459158144" static="0" type="number">0</variable>
         <variable constant="0" name="score" sid="460518059738555" static="0" type="number">0</variable>
         <variable constant="0" name="gameover" sid="605712566048518" static="0" type="number">0</variable>
-        <variable constant="0" name="love" sid="467086110885921" static="0" type="number">100</variable>
-        <variable constant="0" name="decrementLove" sid="289171512626659" static="0" type="number">1</variable>
+        <variable constant="0" name="energy" sid="467086110885921" static="0" type="number">100</variable>
+        <variable constant="0" name="decrementEnergy" sid="289171512626659" static="0" type="number">1</variable>
         <event-group description="" sid="963700602419336" title="Mobs">
             <sub-events>
                 <event-block sid="868523123722418">
@@ -98,18 +100,18 @@
                             <param id="0" name="Interval (seconds)">0.5</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="911565364417045" type="System">
-                            <param id="0" name="Variable">love</param>
+                            <param id="0" name="Variable">energy</param>
                             <param id="1" name="Comparison">4</param>
-                            <param id="2" name="Value">decrementLove</param>
+                            <param id="2" name="Value">decrementEnergy</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="-9" name="Set value" sid="180350594201451" type="System">
-                            <param id="0" name="Variable">love</param>
-                            <param id="1" name="Value">love - decrementLove</param>
+                            <param id="0" name="Variable">energy</param>
+                            <param id="1" name="Value">energy - decrementEnergy</param>
                         </action>
                         <action id="-5" name="Set width" sid="507368876590584" type="loveBar">
-                            <param id="0" name="Width">love</param>
+                            <param id="0" name="Width">energy</param>
                         </action>
                         <action id="0" name="Call function" sid="361314712385117" type="Function">
                             <param id="0" name="Name">&quot;updateLove&quot;</param>
@@ -125,17 +127,17 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Set value" sid="568963175500408" type="System">
-                            <param id="0" name="Variable">decrementLove</param>
-                            <param id="1" name="Value">decrementLove + 1</param>
+                            <param id="0" name="Variable">decrementEnergy</param>
+                            <param id="1" name="Value">decrementEnergy + 1</param>
                         </action>
                     </actions>
                 </event-block>
                 <event-block sid="700175507343371">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="376128844770428" type="System">
-                            <param id="0" name="Variable">love</param>
+                            <param id="0" name="Variable">energy</param>
                             <param id="1" name="Comparison">3</param>
-                            <param id="2" name="Value">decrementLove</param>
+                            <param id="2" name="Value">decrementEnergy</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -166,10 +168,11 @@
                     </conditions>
                     <actions>
                         <action id="0" name="Set text" sid="314290195765995" type="loveText">
-                            <param id="0" name="Text">&quot;Love: &quot;&amp;love&amp;&quot;%&quot;</param>
+                            <param id="0" name="Text">&quot;Love: &quot;&amp;energy&amp;&quot;%&quot;</param>
                         </action>
                     </actions>
                 </event-block>
+                <comment>energia += multiplicadorEnergia * alturaPombo</comment>
                 <event-block sid="866168408408080">
                     <conditions>
                         <condition id="0" name="On function" sid="601371109984124" type="Function">
@@ -192,14 +195,50 @@
                             <param id="1" name="Parameter {n}"></param>
                         </action>
                         <action id="-9" name="Set value" sid="132280232913715" type="System">
-                            <param id="0" name="Variable">love</param>
-                            <param id="1" name="Value">love + (decrementLove * 2)</param>
-                        </action>
-                        <action id="0" name="Call function" sid="275776888106836" type="Function">
-                            <param id="0" name="Name">&quot;updateLove&quot;</param>
-                            <param id="1" name="Parameter {n}"></param>
+                            <param id="0" name="Variable">tempEnergy</param>
+                            <param id="1" name="Value">energy + (multiplicadorEnergia * int(Pombo.FlightHeight/85))</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="301324654663215">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="775279971747208" type="System">
+                                    <param id="0" name="Variable">tempEnergy</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">100</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="218168049126964" type="System">
+                                    <param id="0" name="Variable">energy</param>
+                                    <param id="1" name="Value">100</param>
+                                </action>
+                                <action id="0" name="Call function" sid="275776888106836" type="Function">
+                                    <param id="0" name="Name">&quot;updateLove&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="704657382277178">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="355404233863718" type="System">
+                                    <param id="0" name="Variable">tempEnergy</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">100</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="708066007626441" type="System">
+                                    <param id="0" name="Variable">energy</param>
+                                    <param id="1" name="Value">tempEnergy</param>
+                                </action>
+                                <action id="0" name="Call function" sid="518279114594679" type="Function">
+                                    <param id="0" name="Name">&quot;updateLove&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
@@ -265,14 +304,14 @@
                             <param id="1" name="Value">1</param>
                         </action>
                         <action id="-9" name="Set value" sid="114397257253704" type="System">
-                            <param id="0" name="Variable">love</param>
+                            <param id="0" name="Variable">energy</param>
                             <param id="1" name="Value">0</param>
                         </action>
                         <action id="-5" name="Set width" sid="626396478607584" type="loveBar">
                             <param id="0" name="Width">0</param>
                         </action>
                         <action id="0" name="Set text" sid="591889244912227" type="loveText">
-                            <param id="0" name="Text">&quot;Love: &quot;&amp;love&amp;&quot;%&quot;</param>
+                            <param id="0" name="Text">&quot;Love: &quot;&amp;energy&amp;&quot;%&quot;</param>
                         </action>
                         <action id="-15" name="Set visible" sid="747322249365482" type="gameoverText">
                             <param id="0" name="Visibility">1</param>
