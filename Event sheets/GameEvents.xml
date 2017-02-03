@@ -3,8 +3,9 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>GameEvents</name>
     <events>
+        <variable constant="0" name="limitToDie" sid="122907902155099" static="0" type="number">440</variable>
         <variable constant="0" name="PeopleType" sid="866596020288915" static="0" type="number">0</variable>
-        <variable constant="0" name="restartTime" sid="138901636961189" static="0" type="number">0</variable>
+        <variable constant="0" name="restartTime" sid="138901636961189" static="0" type="number">3</variable>
         <variable constant="0" name="poopEnergyCost" sid="797372990087773" static="0" type="number">5</variable>
         <variable constant="0" name="multiplicadorEnergia" sid="870005369042965" static="0" type="number">5</variable>
         <variable constant="0" name="tempEnergy" sid="740077366283890" static="0" type="number">0</variable>
@@ -443,6 +444,21 @@
                     </conditions>
                     <actions>
                         <action id="0" name="Call function" sid="762338795859259" type="Function">
+                            <param id="0" name="Name">&quot;gameover&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="822235784815813">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="136944030460803" type="System">
+                            <param id="0" name="Variable">limitToDie</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">Pombo.Y</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="277523119545215" type="Function">
                             <param id="0" name="Name">&quot;gameover&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
