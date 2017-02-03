@@ -1,5 +1,5 @@
 ﻿{
-	"version": 1486084481,
+	"version": 1486090832,
 	"fileList": [
 		"data.js",
 		"c2runtime.js",
@@ -11,6 +11,8 @@
 		"images/people2-sheet1.png",
 		"images/people2-sheet2.png",
 		"images/pombo-sheet0.png",
+		"images/pombo-sheet1.png",
+		"images/pombo-sheet2.png",
 		"images/sidewalk.png",
 		"images/poop-sheet0.png",
 		"images/boundary-sheet0.png",
@@ -24,6 +26,9 @@
 		"images/sound-sheet0.png",
 		"images/sound-sheet1.png",
 		"images/particles.png",
+		"images/sprite3-sheet0.png",
+		"images/credito-sheet0.png",
+		"images/colisao-sheet0.png",
 		"media/audiobg.ogg",
 		"media/cork.ogg",
 		"media/poopsplat.ogg",
