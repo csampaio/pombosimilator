@@ -37,7 +37,6 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/Boundary/" />
         <folder expanded="1" path="animation-folder/vultureFace/" />
         <folder expanded="1" path="animation-folder/Play/" />
-        <folder expanded="1" path="animation-folder/Sprite/" />
         <folder expanded="1" path="animation-folder/Sprite2/" />
         <folder expanded="1" path="animation-folder/Sound/" />
         <folder expanded="1" path="animation-folder/Coco/" />
@@ -46,5 +45,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/Creditos/" />
         <folder expanded="1" path="animation-folder/Colisao/" />
         <folder expanded="1" path="animation-folder/poop2/" />
+        <folder expanded="1" path="animation-folder/telaCreditos/" />
+        <folder expanded="1" path="animation-folder/Close/" />
     </folders-expanded>
 </c2uistate>

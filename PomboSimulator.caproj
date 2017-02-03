@@ -732,25 +732,6 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite" sid="420450815644692">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="759054137182825" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.501285" original-source="E:\games\pombosimulator\Assets\buttons.jpg">
-                        <collision-poly>
-                            <point x="0.0330882" y="0.130435" />
-                            <point x="0.5" y="0.0434783" />
-                            <point x="0.955882" y="0.173913" />
-                            <point x="1" y="0.492754" />
-                            <point x="0.966912" y="0.869565" />
-                            <point x="0.5" y="0.971014" />
-                            <point x="0.0441176" y="0.826087" />
-                            <point x="0" y="0.492754" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-type name="Sprite2" sid="984487067375686">
             <plugin id="Sprite" />
             <animation-folder>
@@ -927,6 +908,45 @@
                             <point x="0" y="0" />
                             <point x="1" y="0" />
                             <point x="1" y="1" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="telaCreditos" sid="398010841407252">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="220736998006428" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="E:\games\pombosimulator\Assets\tela_credits.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Close" sid="913203656711562">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="754943766915516" speed="0">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\games\pombosimulator\Assets\buttons_icons_cancel (2).png">
+                        <collision-poly>
+                            <point x="0.15" y="0.15" />
+                            <point x="0.5" y="0" />
+                            <point x="0.85" y="0.15" />
+                            <point x="1" y="0.5" />
+                            <point x="0.85" y="0.85" />
+                            <point x="0.5" y="1" />
+                            <point x="0.15" y="0.85" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\games\pombosimulator\Assets\buttons_icons_cancel (1).png">
+                        <collision-poly>
+                            <point x="0.15" y="0.15" />
+                            <point x="0.5" y="0" />
+                            <point x="0.85" y="0.15" />
+                            <point x="1" y="0.5" />
+                            <point x="0.85" y="0.85" />
+                            <point x="0.5" y="1" />
+                            <point x="0.15" y="0.85" />
+                            <point x="0" y="0.5" />
                         </collision-poly>
                     </frame>
                 </animation>

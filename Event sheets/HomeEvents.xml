@@ -88,13 +88,13 @@
                             <param id="0" name="Scale">0.9</param>
                         </action>
                         <action id="-16" name="Wait" sid="805404511516699" type="System">
-                            <param id="0" name="Seconds">0.5</param>
+                            <param id="0" name="Seconds">0.3</param>
                         </action>
                         <action id="9" name="Set scale" sid="883147396428782" type="Play">
                             <param id="0" name="Scale">1</param>
                         </action>
                         <action id="-16" name="Wait" sid="631557703369174" type="System">
-                            <param id="0" name="Seconds">0.5</param>
+                            <param id="0" name="Seconds">0.3</param>
                         </action>
                         <action id="-2" name="Go to layout" sid="801026517315734" type="System">
                             <param id="0" name="Layout">GameLayout</param>
@@ -116,15 +116,53 @@
                             <param id="0" name="Scale">0.9</param>
                         </action>
                         <action id="-16" name="Wait" sid="545338245225169" type="System">
-                            <param id="0" name="Seconds">0.5</param>
+                            <param id="0" name="Seconds">0.3</param>
                         </action>
                         <action id="9" name="Set scale" sid="745687580296110" type="Creditos">
                             <param id="0" name="Scale">1</param>
                         </action>
                         <action id="-16" name="Wait" sid="533743287750498" type="System">
-                            <param id="0" name="Seconds">0.5</param>
+                            <param id="0" name="Seconds">0.3</param>
                         </action>
-                        <action id="33" name="Stop all" sid="414221926041426" type="Audio" />
+                        <action id="-15" name="Set visible" sid="311852695497721" type="telaCreditos">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="660708919648827" type="Close">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="140572415429065">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="322587619330760" type="Touch">
+                            <param id="0" name="Object">Close</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="447980584868519" type="Close">
+                            <param id="0" name="Frame number">1</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="936214374845451" type="Close">
+                            <param id="0" name="Scale">0.9</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="658995486981128" type="System">
+                            <param id="0" name="Seconds">0.3</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="986105283391590" type="Close">
+                            <param id="0" name="Scale">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="501643039124363" type="System">
+                            <param id="0" name="Seconds">0.3</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="410966192889162" type="telaCreditos">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="741797113116507" type="Close">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="5" name="Set frame" sid="110884081788518" type="Creditos">
+                            <param id="0" name="Frame number">0</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="489310084912273">
