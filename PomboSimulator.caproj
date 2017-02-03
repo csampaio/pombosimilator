@@ -1051,14 +1051,14 @@
         <event-sheet>Home.xml</event-sheet>
     </event-folder>
     <global-instances>
-        <global-instance type="Mouse" uid="5" />
-        <global-instance type="Touch" uid="6">
+        <global-instance type="Mouse" uid="16" />
+        <global-instance type="Touch" uid="17">
             <properties>
                 <use-mouse-input>Yes</use-mouse-input>
             </properties>
         </global-instance>
-        <global-instance type="Function" uid="16" />
-        <global-instance type="Audio" uid="17">
+        <global-instance type="Function" uid="37" />
+        <global-instance type="Audio" uid="38">
             <properties>
                 <timescale-audio>Off</timescale-audio>
                 <saveload>All</saveload>
