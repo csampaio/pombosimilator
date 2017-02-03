@@ -588,7 +588,7 @@
                             <param id="0" name="X">City.X-(dt*100)</param>
                         </action>
                         <action id="-1" name="Set X" sid="872817768933945" type="CityBG">
-                            <param id="0" name="X">CityBG.X-(dt*90)</param>
+                            <param id="0" name="X">CityBG.X-(dt*80)</param>
                         </action>
                         <action id="-1" name="Set X" sid="190227791306782" type="Sky">
                             <param id="0" name="X">Sky.X-(dt*50)</param>
@@ -606,7 +606,17 @@
                         <action id="-1" name="Set X" sid="339869155778413" type="City">
                             <param id="0" name="X">0</param>
                         </action>
-                        <action id="-1" name="Set X" sid="623935481198215" type="CityBG">
+                    </actions>
+                </event-block>
+                <event-block sid="568530769513624">
+                    <conditions>
+                        <condition id="-1" name="Compare X" sid="502756779195617" type="CityBG">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="X co-ordinate">-720</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-1" name="Set X" sid="609788105247548" type="CityBG">
                             <param id="0" name="X">0</param>
                         </action>
                     </actions>
