@@ -38,7 +38,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>0</x>
-                        <y>0</y>
+                        <y>-70</y>
                         <z>0</z>
                         <width>1440</width>
                         <height>480</height>
