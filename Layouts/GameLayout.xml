@@ -4,7 +4,7 @@
     <sid>8873350371196689</sid>
     <event-sheet>GameEvents</event-sheet>
     <size>
-        <width>720</width>
+        <width>780</width>
         <height>480</height>
     </size>
     <margins>
@@ -99,11 +99,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>739</x>
-                        <y>15</y>
+                        <x>726</x>
+                        <y>31</y>
                         <z>0</z>
                         <width>74</width>
-                        <height>50</height>
+                        <height>49</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>

@@ -591,7 +591,7 @@
                             <param id="0" name="X">CityBG.X-(dt*80)</param>
                         </action>
                         <action id="-1" name="Set X" sid="190227791306782" type="Sky">
-                            <param id="0" name="X">Sky.X-(dt*50)</param>
+                            <param id="0" name="X">Sky.X-(dt*40)</param>
                         </action>
                     </actions>
                 </event-block>
@@ -624,14 +624,14 @@
                 <event-block sid="297200088401728">
                     <conditions>
                         <condition id="-6" name="Every X seconds" sid="955148409663028" type="System">
-                            <param id="0" name="Interval (seconds)">11</param>
+                            <param id="0" name="Interval (seconds)">int(random(6,12))</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="-3" name="Create object" sid="631263139240348" type="System">
                             <param id="0" name="Object to create">Sky</param>
                             <param id="1" name="Layer">0</param>
-                            <param id="2" name="X">725</param>
+                            <param id="2" name="X">726</param>
                             <param id="3" name="Y">int(random(15,140))</param>
                         </action>
                     </actions>
