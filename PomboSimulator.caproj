@@ -293,8 +293,30 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="872905359426759" speed="0">
-                    <frame duration="1" hotspotX="0.458333" hotspotY="0.520833" />
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.45" hotspotY="0.525" original-source="E:\games\pombosimulator\Assets\buttons_icons_sound_off.png">
+                        <collision-poly>
+                            <point x="0.15" y="0.15" />
+                            <point x="0.5" y="0" />
+                            <point x="0.85" y="0.15" />
+                            <point x="1" y="0.5" />
+                            <point x="0.85" y="0.85" />
+                            <point x="0.5" y="1" />
+                            <point x="0.15" y="0.85" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\games\pombosimulator\Assets\buttons_icons_sound_on.png">
+                        <collision-poly>
+                            <point x="0.15" y="0.15" />
+                            <point x="0.5" y="0" />
+                            <point x="0.85" y="0.15" />
+                            <point x="1" y="0.5" />
+                            <point x="0.85" y="0.85" />
+                            <point x="0.5" y="1" />
+                            <point x="0.15" y="0.85" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -339,9 +361,15 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="3" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="410932965411041" speed="12">
-                    <frame duration="1" hotspotX="0.506024" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.506024" hotspotY="0.5" />
-                    <frame duration="1" hotspotX="0.506024" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.506024" hotspotY="0.5">
+                        <image-point name="Saida" x="0.361446" y="0.98" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.506024" hotspotY="0.5">
+                        <image-point name="Saida" x="0.361446" y="0.98" />
+                    </frame>
+                    <frame duration="1" hotspotX="0.506024" hotspotY="0.5">
+                        <image-point name="Saida" x="0.361446" y="0.98" />
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
@@ -364,7 +392,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Credito" sid="599337050416202">
+        <object-type name="Creditos" sid="599337050416202">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="772916198486275" speed="0">
@@ -405,6 +433,32 @@
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="656074796016121" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="poop2" sid="412508154566504">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="DestroyOutsideLayout" sid="455342044309674">
+                    <behavior id="destroy" />
+                </behavior-type>
+                <behavior-type name="Solid" sid="494705067790340">
+                    <behavior id="solid" />
+                </behavior-type>
+                <behavior-type name="Bullet" sid="345440697567739">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="348738886867509" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\developer\game\pombosimulator\Assets\pombo_coco.png">
+                        <collision-poly>
+                            <point x="0" y="1" />
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="1" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
