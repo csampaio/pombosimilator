@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>GameEvents</name>
     <events>
+        <variable comment="Valor da barra para disparar o alarme" constant="0" name="LowEnergyRate" sid="678513712945139" static="0" type="number">35</variable>
         <variable constant="0" name="poopOrder" sid="812659911874695" static="0" type="number">0</variable>
         <variable constant="0" name="poopSpeed" sid="645287999477038" static="0" type="number">-200</variable>
         <variable constant="0" name="limitToDie" sid="122907902155099" static="0" type="number">440</variable>
@@ -284,6 +285,41 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <event-block sid="372821156585169">
+                    <conditions>
+                        <condition id="5" inverted="1" name="Is tag playing" sid="479089860574629" type="Audio">
+                            <param id="0" name="Tag">&quot;LowEnergy&quot;</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="851412007553949" type="System">
+                            <param id="0" name="Variable">energy</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">LowEnergyRate</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="530334275438205" type="Audio">
+                            <param id="0" name="Audio file">Siren_Noise-KevanGC-1337458893</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">-10</param>
+                            <param id="1" name="Tag (optional)">&quot;LowEnergy&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="761909693217716">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="208581734887830" type="System" />
+                        <condition id="-14" name="Compare variable" sid="994825396076144" type="System">
+                            <param id="0" name="Variable">energy</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">LowEnergyRate + 1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="6" name="Stop" sid="616087493642740" type="Audio">
+                            <param id="0" name="Tag">&quot;LowEnergy&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
         <event-group description="" sid="572691998521604" title="Background">
@@ -563,13 +599,155 @@
                                     <param id="0" name="Audio file">passinhoPombo</param>
                                     <param id="2" name="Loop">1</param>
                                     <param id="3" name="Volume">-15</param>
-                                    <param id="1" name="Tag (optional)">&quot;&quot;</param>
+                                    <param id="1" name="Tag (optional)">&quot;PassinhoPombo&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
+                <event-block sid="682567091134640">
+                    <conditions>
+                        <condition id="0" name="On function" sid="745772046266065" type="Function">
+                            <param id="0" name="Name">&quot;gameover&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="666094573599431" type="Pombo" />
+                        <action id="-9" name="Set value" sid="506680388378725" type="System">
+                            <param id="0" name="Variable">gameover</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-5" name="Set width" sid="626396478607584" type="loveBar">
+                            <param id="0" name="Width">0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="591889244912227" type="loveText">
+                            <param id="0" name="Text">&quot;Love: &quot;&amp;energy&amp;&quot;%&quot;</param>
+                        </action>
+                        <action id="33" name="Stop all" sid="845392536324071" type="Audio" />
+                        <action id="-13" name="Set time scale" sid="673574751674531" type="System">
+                            <param id="0" name="Time scale">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="747322249365482" type="GameOverPanel">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="264501599223624" type="Restart">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="477540509720577" type="Menu">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="623177505733158">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="893896591042111" type="Touch">
+                            <param id="0" name="Object">PauseBtn</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set time scale" sid="385396364104038" type="System">
+                            <param id="0" name="Time scale">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="279231428454282" type="PauseBtn">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="933829181910132" type="PausePanel">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="358860680186891" type="PlayBtn">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="239179057606195" type="MenuBtn">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="22" name="Set paused" sid="457823684030437" type="Audio">
+                            <param id="0" name="Tag">&quot;PassinhoPombo&quot;</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="846947015382914">
+                    <conditions>
+                        <condition id="17" name="On tap object" sid="691216272633473" type="Touch">
+                            <param id="0" name="Object">PlayBtn</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="310667466730867" type="PauseBtn">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="721165686373174" type="PausePanel">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="147484327663067" type="PlayBtn">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="313469113704658" type="MenuBtn">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-13" name="Set time scale" sid="880798118320670" type="System">
+                            <param id="0" name="Time scale">1</param>
+                        </action>
+                        <action id="22" name="Set paused" sid="504835558313982" type="Audio">
+                            <param id="0" name="Tag">&quot;PassinhoPombo&quot;</param>
+                            <param id="1" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="859570020273098">
+            <conditions>
+                <condition id="17" name="On tap object" sid="619126637534974" type="Touch">
+                    <param id="0" name="Object">MenuBtn</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="779244155368672" type="MenuBtn">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="273242009768658" type="System">
+                    <param id="0" name="Layout">HomeLayout</param>
+                </action>
+                <action id="-13" name="Set time scale" sid="242101102824606" type="System">
+                    <param id="0" name="Time scale">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="239142006519379">
+            <conditions>
+                <condition id="17" name="On tap object" sid="966831526329932" type="Touch">
+                    <param id="0" name="Object">Menu</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="5" name="Set frame" sid="988168947174641" type="Menu">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="160176348465290" type="System">
+                    <param id="0" name="Layout">HomeLayout</param>
+                </action>
+                <action id="-13" name="Set time scale" sid="803559617760168" type="System">
+                    <param id="0" name="Time scale">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="699684581450815">
+            <conditions>
+                <condition id="17" name="On tap object" sid="505822595603991" type="Touch">
+                    <param id="0" name="Object">Restart</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-13" name="Set time scale" sid="340220468220268" type="System">
+                    <param id="0" name="Time scale">1</param>
+                </action>
+                <action id="5" name="Set frame" sid="559753124198234" type="Restart">
+                    <param id="0" name="Frame number">1</param>
+                </action>
+                <action id="-21" name="Reset global variables" sid="539434247523727" type="System" />
+                <action id="-26" name="Restart layout" sid="168707016100331" type="System" />
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
