@@ -22,7 +22,10 @@
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
         <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
+        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
         <behavior author="Scirra" id="wrap" version="1">Wrap</behavior>
     </used-behaviors>
@@ -116,6 +119,17 @@
             <instance-variables>
                 <instance-variable comment="Altura de vôo" name="FlightHeight" sid="507412654831406" type="number" />
             </instance-variables>
+            <behaviors>
+                <behavior-type name="Platform" sid="622556374808500">
+                    <behavior id="Platform" />
+                </behavior-type>
+                <behavior-type name="BoundToLayout" sid="159324418160461">
+                    <behavior id="bound" />
+                </behavior-type>
+                <behavior-type name="ScrollTo" sid="149015595089025">
+                    <behavior id="scrollto" />
+                </behavior-type>
+            </behaviors>
             <animation-folder>
                 <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="857678655393240" speed="12">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
@@ -280,6 +294,18 @@
         <object-type name="Particles" sid="309375726141353">
             <plugin id="Particles" />
             <texture original-source="E:\games\pombosimulator\Assets\pombo_coco.png" />
+        </object-type>
+        <object-type name="Pombo2" sid="953757061204360">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable comment="Altura de vôo" name="FlightHeight" sid="409754613913823" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="410932965411041" speed="12">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families />

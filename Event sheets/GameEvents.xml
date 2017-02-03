@@ -312,6 +312,9 @@
                             <param id="3" name="Volume">-5</param>
                             <param id="1" name="Tag (optional)">&quot;cork&quot;</param>
                         </action>
+                        <action behavior="Platform" id="9" name="Set vector Y" sid="777948802877873" type="Pombo">
+                            <param id="0" name="Vector Y">-60</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="221251789535016">
