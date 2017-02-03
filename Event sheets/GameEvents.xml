@@ -68,8 +68,8 @@
                         <action id="-3" name="Create object" sid="108240580448497" type="System">
                             <param id="0" name="Object to create">People</param>
                             <param id="1" name="Layer">&quot;Game&quot;</param>
-                            <param id="2" name="X">680</param>
-                            <param id="3" name="Y">random(430,460)</param>
+                            <param id="2" name="X">720</param>
+                            <param id="3" name="Y">random(420,445)</param>
                         </action>
                     </actions>
                 </event-block>
@@ -83,8 +83,8 @@
                         <action id="-3" name="Create object" sid="531953592301300" type="System">
                             <param id="0" name="Object to create">People2</param>
                             <param id="1" name="Layer">&quot;Game&quot;</param>
-                            <param id="2" name="X">658</param>
-                            <param id="3" name="Y">random(430,460)</param>
+                            <param id="2" name="X">720</param>
+                            <param id="3" name="Y">random(420,445)</param>
                         </action>
                     </actions>
                 </event-block>
@@ -140,30 +140,10 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Destroy" sid="959508551531392" type="poop" />
-                        <action id="-9" name="Set value" sid="806738788416683" type="System">
-                            <param id="0" name="Variable">gameover</param>
-                            <param id="1" name="Value">1</param>
+                        <action id="0" name="Call function" sid="932209421573242" type="Function">
+                            <param id="0" name="Name">&quot;gameover&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
                         </action>
-                        <action id="-9" name="Set value" sid="376105712198349" type="System">
-                            <param id="0" name="Variable">love</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="-5" name="Set width" sid="591817078023344" type="loveBar">
-                            <param id="0" name="Width">0</param>
-                        </action>
-                        <action id="0" name="Set text" sid="903335553905348" type="loveText">
-                            <param id="0" name="Text">&quot;Love: &quot;&amp;love&amp;&quot;%&quot;</param>
-                        </action>
-                        <action id="-15" name="Set visible" sid="776974434236029" type="gameoverText">
-                            <param id="0" name="Visibility">1</param>
-                        </action>
-                        <action id="33" name="Stop all" sid="407831652568150" type="Audio" />
-                        <action id="-16" name="Wait" sid="918248997685628" type="System">
-                            <param id="0" name="Seconds">3</param>
-                        </action>
-                        <action id="-21" name="Reset global variables" sid="844980232319460" type="System" />
-                        <action id="33" name="Stop all" sid="197164517827901" type="Audio" />
-                        <action id="-26" name="Restart layout" sid="305446800194913" type="System" />
                     </actions>
                 </event-block>
                 <event-block sid="394860822894187">
@@ -272,6 +252,40 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="682567091134640">
+                    <conditions>
+                        <condition id="0" name="On function" sid="745772046266065" type="Function">
+                            <param id="0" name="Name">&quot;gameover&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="666094573599431" type="Pombo" />
+                        <action id="-9" name="Set value" sid="506680388378725" type="System">
+                            <param id="0" name="Variable">gameover</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="114397257253704" type="System">
+                            <param id="0" name="Variable">love</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-5" name="Set width" sid="626396478607584" type="loveBar">
+                            <param id="0" name="Width">0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="591889244912227" type="loveText">
+                            <param id="0" name="Text">&quot;Love: &quot;&amp;love&amp;&quot;%&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="747322249365482" type="gameoverText">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="33" name="Stop all" sid="845392536324071" type="Audio" />
+                        <action id="-16" name="Wait" sid="636475288541869" type="System">
+                            <param id="0" name="Seconds">3</param>
+                        </action>
+                        <action id="-21" name="Reset global variables" sid="899005500977888" type="System" />
+                        <action id="33" name="Stop all" sid="423696845252106" type="Audio" />
+                        <action id="-26" name="Restart layout" sid="283475400458139" type="System" />
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
         <event-group description="" sid="348564989243525" title="Player">
@@ -354,6 +368,32 @@
                             <param id="2" name="Loop">0</param>
                             <param id="3" name="Volume">-5</param>
                             <param id="1" name="Tag (optional)">&quot;cork&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="489422826939852">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="942645073855964" type="Pombo">
+                            <param id="0" name="Object">People</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="762338795859259" type="Function">
+                            <param id="0" name="Name">&quot;gameover&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="841684406114868">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="586621443664270" type="Pombo">
+                            <param id="0" name="Object">People2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="965394493462954" type="Function">
+                            <param id="0" name="Name">&quot;gameover&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>
                 </event-block>
