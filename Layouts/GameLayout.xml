@@ -340,6 +340,28 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
+                <instance type="LoveBar" uid="11">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>89.007575989</x>
+                        <y>39</y>
+                        <z>0</z>
+                        <width>160.752532959</width>
+                        <height>61.889720917</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.506493509</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
                 <instance type="GameOverPanel" uid="5">
                     <properties>
                         <initial-visibility>Invisible</initial-visibility>
@@ -362,28 +384,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="vultureFace" uid="9">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>4</x>
-                        <y>20</y>
-                        <z>0</z>
-                        <width>40</width>
-                        <height>40</height>
-                        <depth>0</depth>
-                        <hotspotX>-0.1875</hotspotX>
-                        <hotspotY>0.111111112</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="energyText" uid="12">
                     <properties>
                         <text>Energy: 100%</text>
@@ -399,8 +399,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>58</x>
-                        <y>10</y>
+                        <x>118.470123291</x>
+                        <y>-41.537208557</y>
                         <z>0</z>
                         <width>116</width>
                         <height>28</height>
@@ -426,8 +426,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>10.535503387</x>
-                        <y>61.191947937</y>
+                        <x>59.323867798</x>
+                        <y>58.443122864</y>
                         <z>0</z>
                         <width>200</width>
                         <height>30</height>
@@ -480,8 +480,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>623</x>
-                        <y>6</y>
+                        <x>610</x>
+                        <y>-42</y>
                         <z>0</z>
                         <width>90</width>
                         <height>30</height>
@@ -502,8 +502,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>57</x>
-                        <y>44</y>
+                        <x>62.465263367</x>
+                        <y>39</y>
                         <z>0</z>
                         <width>100</width>
                         <height>25</height>
@@ -639,6 +639,28 @@
                         <z>0</z>
                         <width>40</width>
                         <height>40</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Vulture" uid="9">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>4</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>39.312294006</x>
+                        <y>38.491611481</y>
+                        <z>0</z>
+                        <width>53.295978546</width>
+                        <height>53.295974731</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
