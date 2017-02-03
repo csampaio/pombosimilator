@@ -9,7 +9,7 @@
         <variable constant="0" name="score" sid="460518059738555" static="0" type="number">0</variable>
         <variable constant="0" name="gameover" sid="605712566048518" static="0" type="number">0</variable>
         <variable constant="0" name="energy" sid="467086110885921" static="0" type="number">100</variable>
-        <variable constant="0" name="decrementEnergy" sid="289171512626659" static="0" type="number">1</variable>
+        <variable constant="0" name="decrementEnergyRate" sid="289171512626659" static="0" type="number">1</variable>
         <event-group description="" sid="963700602419336" title="Mobs">
             <sub-events>
                 <event-block sid="868523123722418">
@@ -97,24 +97,24 @@
                 <event-block sid="174068976329285">
                     <conditions>
                         <condition id="-6" name="Every X seconds" sid="765947342421138" type="System">
-                            <param id="0" name="Interval (seconds)">0.5</param>
+                            <param id="0" name="Interval (seconds)">1</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="911565364417045" type="System">
                             <param id="0" name="Variable">energy</param>
                             <param id="1" name="Comparison">4</param>
-                            <param id="2" name="Value">decrementEnergy</param>
+                            <param id="2" name="Value">decrementEnergyRate</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="-9" name="Set value" sid="180350594201451" type="System">
                             <param id="0" name="Variable">energy</param>
-                            <param id="1" name="Value">energy - decrementEnergy</param>
+                            <param id="1" name="Value">energy - decrementEnergyRate</param>
                         </action>
                         <action id="-5" name="Set width" sid="507368876590584" type="loveBar">
                             <param id="0" name="Width">energy</param>
                         </action>
                         <action id="0" name="Call function" sid="361314712385117" type="Function">
-                            <param id="0" name="Name">&quot;updateLove&quot;</param>
+                            <param id="0" name="Name">&quot;updateEnergy&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>
@@ -122,13 +122,13 @@
                 <event-block sid="398972561853107">
                     <conditions>
                         <condition id="-6" name="Every X seconds" sid="372493265905580" type="System">
-                            <param id="0" name="Interval (seconds)">2</param>
+                            <param id="0" name="Interval (seconds)">5</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="-9" name="Set value" sid="568963175500408" type="System">
-                            <param id="0" name="Variable">decrementEnergy</param>
-                            <param id="1" name="Value">decrementEnergy + 1</param>
+                            <param id="0" name="Variable">decrementEnergyRate</param>
+                            <param id="1" name="Value">decrementEnergyRate + 1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -137,7 +137,7 @@
                         <condition id="-14" name="Compare variable" sid="376128844770428" type="System">
                             <param id="0" name="Variable">energy</param>
                             <param id="1" name="Comparison">3</param>
-                            <param id="2" name="Value">decrementEnergy</param>
+                            <param id="2" name="Value">decrementEnergyRate</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -163,12 +163,12 @@
                 <event-block sid="905200095048816">
                     <conditions>
                         <condition id="0" name="On function" sid="908994008764817" type="Function">
-                            <param id="0" name="Name">&quot;updateLove&quot;</param>
+                            <param id="0" name="Name">&quot;updateEnergy&quot;</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="0" name="Set text" sid="314290195765995" type="loveText">
-                            <param id="0" name="Text">&quot;Love: &quot;&amp;energy&amp;&quot;%&quot;</param>
+                            <param id="0" name="Text">&quot;Energy: &quot;&amp;energy&amp;&quot;%&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -214,7 +214,7 @@
                                     <param id="1" name="Value">100</param>
                                 </action>
                                 <action id="0" name="Call function" sid="275776888106836" type="Function">
-                                    <param id="0" name="Name">&quot;updateLove&quot;</param>
+                                    <param id="0" name="Name">&quot;updateEnergy&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
                             </actions>
@@ -233,7 +233,7 @@
                                     <param id="1" name="Value">tempEnergy</param>
                                 </action>
                                 <action id="0" name="Call function" sid="518279114594679" type="Function">
-                                    <param id="0" name="Name">&quot;updateLove&quot;</param>
+                                    <param id="0" name="Name">&quot;updateEnergy&quot;</param>
                                     <param id="1" name="Parameter {n}"></param>
                                 </action>
                             </actions>

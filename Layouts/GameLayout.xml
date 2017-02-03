@@ -418,21 +418,21 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>23.721193314</x>
-                        <y>21.66934967</y>
+                        <x>4</x>
+                        <y>20</y>
                         <z>0</z>
-                        <width>35</width>
-                        <height>33</height>
+                        <width>40</width>
+                        <height>40</height>
                         <depth>0</depth>
-                        <hotspotX>0.404669255</hotspotX>
-                        <hotspotY>0.0661157</hotspotY>
+                        <hotspotX>-0.1875</hotspotX>
+                        <hotspotY>0.111111112</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
                 <instance type="loveText" uid="12">
                     <properties>
-                        <text>Love: 100%</text>
+                        <text>Energy: 100%</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial,-16,400,0</font>
                         <color>255,255,102</color>
@@ -445,8 +445,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>49.46484375</x>
-                        <y>8.297828674</y>
+                        <x>52</x>
+                        <y>8.298000336</y>
                         <z>0</z>
                         <width>116</width>
                         <height>28</height>
