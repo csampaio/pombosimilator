@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>GameEvents</name>
     <events>
+        <variable constant="0" name="poopEnergyCost" sid="797372990087773" static="0" type="number">5</variable>
         <variable constant="0" name="multiplicadorEnergia" sid="870005369042965" static="0" type="number">5</variable>
         <variable constant="0" name="tempEnergy" sid="740077366283890" static="0" type="number">0</variable>
         <variable constant="0" name="force" sid="590755459158144" static="0" type="number">0</variable>
@@ -352,23 +353,7 @@
                             <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="-3" name="Create object" sid="225169290130398" type="System">
-                            <param id="0" name="Object to create">poop</param>
-                            <param id="1" name="Layer">&quot;Game&quot;</param>
-                            <param id="2" name="X">Pombo.X</param>
-                            <param id="3" name="Y">Pombo.Y</param>
-                        </action>
-                        <action id="0" name="Play" sid="917768271212496" type="Audio">
-                            <param id="0" name="Audio file">cork</param>
-                            <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">-5</param>
-                            <param id="1" name="Tag (optional)">&quot;cork&quot;</param>
-                        </action>
-                        <action behavior="Platform" id="9" name="Set vector Y" sid="777948802877873" type="Pombo">
-                            <param id="0" name="Vector Y">-60</param>
-                        </action>
-                    </actions>
+                    <actions />
                 </event-block>
                 <event-block sid="221251789535016">
                     <conditions>
@@ -397,6 +382,17 @@
                         </action>
                         <action id="-6" name="Set height" sid="794882707142140" type="poop">
                             <param id="0" name="Height">force * 10</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="203674096290584" type="System">
+                            <param id="0" name="Variable">energy</param>
+                            <param id="1" name="Value">energy - (poopEnergyCost * int(force))</param>
+                        </action>
+                        <action id="0" name="Call function" sid="425333209363451" type="Function">
+                            <param id="0" name="Name">&quot;updateEnergy&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action behavior="Platform" id="9" name="Set vector Y" sid="278488937794807" type="Pombo">
+                            <param id="0" name="Vector Y">-60 - (int(force * 10))</param>
                         </action>
                         <action id="-9" name="Set value" sid="336081662983152" type="System">
                             <param id="0" name="Variable">force</param>
