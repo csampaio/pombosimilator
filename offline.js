@@ -1,5 +1,5 @@
 ﻿{
-	"version": 1486090832,
+	"version": 1486094839,
 	"fileList": [
 		"data.js",
 		"c2runtime.js",
@@ -27,8 +27,9 @@
 		"images/sound-sheet1.png",
 		"images/particles.png",
 		"images/sprite3-sheet0.png",
-		"images/credito-sheet0.png",
+		"images/creditos-sheet0.png",
 		"images/colisao-sheet0.png",
+		"images/poop2-sheet0.png",
 		"media/audiobg.ogg",
 		"media/cork.ogg",
 		"media/poopsplat.ogg",
