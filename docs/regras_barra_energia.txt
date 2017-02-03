@@ -1,0 +1,4 @@
+1. A barra irá decrementar gradualmente a medida que o tempo passa
+2. Quando o pombo cagar a barra irá decrementar relativo ao tamanho do coco
+3. Quando o pombo come um item a barra acresce
+4. Quando o pombo acerta o coco na pessoa a barra cresce relativo a altura do pombo
