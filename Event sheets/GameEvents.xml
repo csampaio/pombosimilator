@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>GameEvents</name>
     <events>
+        <variable constant="0" name="restartTime" sid="138901636961189" static="0" type="number">0</variable>
         <variable constant="0" name="poopEnergyCost" sid="797372990087773" static="0" type="number">5</variable>
         <variable constant="0" name="multiplicadorEnergia" sid="870005369042965" static="0" type="number">5</variable>
         <variable constant="0" name="tempEnergy" sid="740077366283890" static="0" type="number">0</variable>
@@ -319,7 +320,7 @@
                         </action>
                         <action id="33" name="Stop all" sid="845392536324071" type="Audio" />
                         <action id="-16" name="Wait" sid="636475288541869" type="System">
-                            <param id="0" name="Seconds">3</param>
+                            <param id="0" name="Seconds">restartTime</param>
                         </action>
                         <action id="-21" name="Reset global variables" sid="899005500977888" type="System" />
                         <action id="33" name="Stop all" sid="423696845252106" type="Audio" />
