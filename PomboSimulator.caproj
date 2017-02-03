@@ -612,6 +612,9 @@
         </object-type>
         <object-type name="poop" sid="620858380129223">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="order" sid="865912833074245" type="number" />
+            </instance-variables>
             <behaviors>
                 <behavior-type name="DestroyOutsideLayout" sid="927746611872269">
                     <behavior id="destroy" />

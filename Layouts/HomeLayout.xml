@@ -185,11 +185,14 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <order>0</order>
+                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="DestroyOutsideLayout" />
                         <behavior-instance type="Bullet">
                             <properties>
-                                <speed>-200</speed>
+                                <speed>0</speed>
                                 <acceleration>0</acceleration>
                                 <gravity>1000</gravity>
                                 <bounce-off-solids>No</bounce-off-solids>

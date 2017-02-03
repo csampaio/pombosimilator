@@ -3,6 +3,8 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>GameEvents</name>
     <events>
+        <variable constant="0" name="poopOrder" sid="812659911874695" static="0" type="number">0</variable>
+        <variable constant="0" name="poopSpeed" sid="645287999477038" static="0" type="number">-200</variable>
         <variable constant="0" name="limitToDie" sid="122907902155099" static="0" type="number">440</variable>
         <variable constant="0" name="PeopleType" sid="866596020288915" static="0" type="number">0</variable>
         <variable constant="0" name="restartTime" sid="138901636961189" static="0" type="number">3</variable>
@@ -407,10 +409,40 @@
                             <param id="1" name="Value">force + 0.1</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block sid="824887674281831">
+                            <conditions>
+                                <condition id="-20" name="Pick highest/lowest" sid="104513369264342" type="poop">
+                                    <param id="0" name="Which">1</param>
+                                    <param id="1" name="Instance variable">order</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Bullet" id="0" name="Set speed" sid="351096599556140" type="poop">
+                                    <param id="0" name="Speed">200</param>
+                                </action>
+                                <action behavior="Bullet" id="0" name="Set speed" sid="788159038303367" type="poop">
+                                    <param id="0" name="Speed">0</param>
+                                </action>
+                                <action id="-5" name="Set width" sid="357961113101290" type="poop">
+                                    <param id="0" name="Width">force * 10</param>
+                                </action>
+                                <action id="-6" name="Set height" sid="794882707142140" type="poop">
+                                    <param id="0" name="Height">force * 10</param>
+                                </action>
+                                <action id="-1" name="Set X" sid="865701405090531" type="poop">
+                                    <param id="0" name="X">Pombo.X - 8</param>
+                                </action>
+                                <action id="-2" name="Set Y" sid="997331494024142" type="poop">
+                                    <param id="0" name="Y">Pombo.Y + 8</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
-                <event-block sid="981328875820698">
+                <event-block sid="775308499082795">
                     <conditions>
-                        <condition id="1" name="On any touch end" sid="887097700813580" type="Touch" />
+                        <condition id="0" name="On any touch start" sid="974511081765677" type="Touch" />
                     </conditions>
                     <actions>
                         <action id="-3" name="Create object" sid="873679992778313" type="System">
@@ -419,12 +451,21 @@
                             <param id="2" name="X">Pombo.X</param>
                             <param id="3" name="Y">Pombo.Y</param>
                         </action>
-                        <action id="-5" name="Set width" sid="357961113101290" type="poop">
-                            <param id="0" name="Width">force * 10</param>
+                        <action id="-10" name="Set value" sid="618049925568484" type="poop">
+                            <param id="0" name="Instance variable">order</param>
+                            <param id="1" name="Value">poopOrder</param>
                         </action>
-                        <action id="-6" name="Set height" sid="794882707142140" type="poop">
-                            <param id="0" name="Height">force * 10</param>
+                        <action id="-9" name="Set value" sid="863550794706148" type="System">
+                            <param id="0" name="Variable">poopOrder</param>
+                            <param id="1" name="Value">poopOrder + 1</param>
                         </action>
+                    </actions>
+                </event-block>
+                <event-block sid="981328875820698">
+                    <conditions>
+                        <condition id="1" name="On any touch end" sid="887097700813580" type="Touch" />
+                    </conditions>
+                    <actions>
                         <action id="-9" name="Set value" sid="203674096290584" type="System">
                             <param id="0" name="Variable">energy</param>
                             <param id="1" name="Value">energy - (poopEnergyCost * int(force))</param>
@@ -456,6 +497,19 @@
                                     <param id="2" name="Loop">0</param>
                                     <param id="3" name="Volume">-5</param>
                                     <param id="1" name="Tag (optional)">&quot;cork&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="572777670178611">
+                            <conditions>
+                                <condition id="-20" name="Pick highest/lowest" sid="806808192215166" type="poop">
+                                    <param id="0" name="Which">1</param>
+                                    <param id="1" name="Instance variable">order</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Bullet" id="0" name="Set speed" sid="917208735127721" type="poop">
+                                    <param id="0" name="Speed">-200</param>
                                 </action>
                             </actions>
                         </event-block>
