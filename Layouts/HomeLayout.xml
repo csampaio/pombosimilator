@@ -51,7 +51,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Credito" uid="28">
+                <instance type="Creditos" uid="28">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -248,11 +248,11 @@
                         <x>35</x>
                         <y>38</y>
                         <z>0</z>
-                        <width>48</width>
-                        <height>48</height>
+                        <width>40</width>
+                        <height>40</height>
                         <depth>0</depth>
-                        <hotspotX>0.458333343</hotspotX>
-                        <hotspotY>0.520833313</hotspotY>
+                        <hotspotX>0.449999988</hotspotX>
+                        <hotspotY>0.524999976</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -317,11 +317,51 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>360</x>
-                        <y>123</y>
+                        <x>414</x>
+                        <y>125</y>
                         <z>0</z>
                         <width>10.954451561</width>
                         <height>10.954451561</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="poop2" uid="30">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="DestroyOutsideLayout" />
+                        <behavior-instance type="Solid">
+                            <properties>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Bullet">
+                            <properties>
+                                <speed>-100</speed>
+                                <acceleration>50</acceleration>
+                                <gravity>1000</gravity>
+                                <bounce-off-solids>No</bounce-off-solids>
+                                <set-angle>Yes</set-angle>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-38</x>
+                        <y>292</y>
+                        <z>0</z>
+                        <width>22</width>
+                        <height>22</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
