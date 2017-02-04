@@ -365,8 +365,8 @@
                                 <action id="5" name="Set frame" sid="774647627216560" type="Restart">
                                     <param id="0" name="Frame number">0</param>
                                 </action>
-                                <action id="-21" name="Reset global variables" sid="539434247523727" type="System" />
                                 <action id="-26" name="Restart layout" sid="168707016100331" type="System" />
+                                <action id="-21" name="Reset global variables" sid="539434247523727" type="System" />
                             </actions>
                         </event-block>
                     </sub-events>
@@ -832,6 +832,16 @@
         </event-group>
         <event-group description="" sid="931405705820213" title="Game Manager">
             <sub-events>
+                <event-block sid="593035175557108">
+                    <conditions>
+                        <condition id="-4" name="Is outside layout" sid="399804486378687" type="Bruxa" />
+                    </conditions>
+                    <actions>
+                        <action id="-42" name="Signal" sid="272106872086251" type="System">
+                            <param id="0" name="Tag">&quot;ShowPanel&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="875448132833026">
                     <conditions>
                         <condition id="-2" name="On start of layout" sid="619859189652803" type="System" />
@@ -857,6 +867,50 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <event-block sid="662962966098685">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="588006474679403" type="System">
+                            <param id="0" name="Variable">gameover</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="110889562323303" type="System">
+                            <param id="0" name="First value">distance(Bruxa.X,Bruxa.Y,Pombo.X,Pombo.Y)</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="400442738312363" type="Bruxa">
+                            <param id="0" name="Instance variable">CachedPombo</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-21" name="Rotate toward position" sid="982764547359495" type="Bruxa">
+                            <param id="0" name="Degrees">1</param>
+                            <param id="1" name="X">Pombo.X</param>
+                            <param id="2" name="Y">Pombo.Y</param>
+                        </action>
+                        <action id="-17" name="Move forward" sid="291302480279383" type="Bruxa">
+                            <param id="0" name="Distance">5</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="137674981350415">
+                            <conditions>
+                                <condition id="5" inverted="1" name="Is tag playing" sid="685629713792293" type="Audio">
+                                    <param id="0" name="Tag">&quot;Bruxa&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="634161722174311" type="Audio">
+                                    <param id="0" name="Audio file">Witch Cackle 03</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-10</param>
+                                    <param id="1" name="Tag (optional)">&quot;Bruxa&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
                 <event-block sid="682567091134640">
                     <conditions>
                         <condition id="0" name="On function" sid="745772046266065" type="Function">
@@ -864,10 +918,15 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-9" name="Destroy" sid="666094573599431" type="Pombo" />
                         <action id="-9" name="Set value" sid="506680388378725" type="System">
                             <param id="0" name="Variable">gameover</param>
                             <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="6" name="Stop" sid="198625154418581" type="Audio">
+                            <param id="0" name="Tag">&quot;passinhoPombo&quot;</param>
+                        </action>
+                        <action id="-41" name="Wait for signal" sid="187708051638714" type="System">
+                            <param id="0" name="Tag">&quot;ShowPanel&quot;</param>
                         </action>
                         <action id="33" name="Stop all" sid="845392536324071" type="Audio" />
                         <action id="-13" name="Set time scale" sid="673574751674531" type="System">
@@ -884,6 +943,44 @@
                         </action>
                         <action id="-15" name="Set visible" sid="939376800961350" type="PauseBtn">
                             <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="682483399439616">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="228665947156910" type="Bruxa">
+                            <param id="0" name="Object">Pombo</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="428362783077564" type="Pombo">
+                            <param id="0" name="Pin to">Bruxa</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
+                        <action id="-13" name="Set boolean" sid="356169622991847" type="Bruxa">
+                            <param id="0" name="Instance variable">CachedPombo</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="869901890598515">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="773603472090489" type="Bruxa">
+                            <param id="0" name="Instance variable">CachedPombo</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-17" name="Move forward" sid="600918229509283" type="Bruxa">
+                            <param id="0" name="Distance">5</param>
+                        </action>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="976027190579357" type="Pombo">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="136198997635863" type="Bruxa">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                        <action behavior="8Direction" id="7" name="Simulate control" sid="834046510199787" type="Bruxa">
+                            <param id="0" name="Control">1</param>
                         </action>
                     </actions>
                 </event-block>

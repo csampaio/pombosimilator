@@ -21,7 +21,10 @@
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
+        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
         <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
@@ -70,14 +73,8 @@
         <object-type name="People" sid="751904300880336">
             <plugin id="Sprite" />
             <behaviors>
-                <behavior-type name="Solid" sid="715451805158443">
-                    <behavior id="solid" />
-                </behavior-type>
                 <behavior-type name="Bullet" sid="665003803740773">
                     <behavior id="Bullet" />
-                </behavior-type>
-                <behavior-type name="Wrap" sid="512924550701601">
-                    <behavior id="wrap" />
                 </behavior-type>
             </behaviors>
             <animation-folder>
@@ -435,6 +432,9 @@
                 </behavior-type>
                 <behavior-type name="ScrollTo" sid="149015595089025">
                     <behavior id="scrollto" />
+                </behavior-type>
+                <behavior-type name="Pin" sid="902733432443426">
+                    <behavior id="Pin" />
                 </behavior-type>
             </behaviors>
             <animation-folder>
@@ -1058,6 +1058,107 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Bruxa" sid="260435801464426">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable comment="Informa se a bruxa pegou o pombo" name="CachedPombo" sid="590830275121368" type="boolean" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="8Direction" sid="955040679124717">
+                    <behavior id="EightDir" />
+                </behavior-type>
+                <behavior-type name="Sine" sid="222129916720889">
+                    <behavior id="Sin" />
+                </behavior-type>
+                <behavior-type name="Pin" sid="486393145072449">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="10" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="468460774362500" speed="16">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\projetos\PosUEA\pombosimulator\Assets\luke-lewis-witch-move-sprite-sheet.png">
+                        <collision-poly>
+                            <point x="0.328125" y="0.168367" />
+                            <point x="0.786459" y="0.168367" />
+                            <point x="1" y="0.852041" />
+                            <point x="0" y="0.852041" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.497355" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.328125" y="0.168367" />
+                            <point x="0.786459" y="0.168367" />
+                            <point x="1" y="0.852041" />
+                            <point x="0" y="0.852041" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.328125" y="0.168367" />
+                            <point x="0.786459" y="0.168367" />
+                            <point x="1" y="0.852041" />
+                            <point x="0" y="0.852041" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.497409" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.328125" y="0.168367" />
+                            <point x="0.786459" y="0.168367" />
+                            <point x="1" y="0.852041" />
+                            <point x="0" y="0.852041" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.328125" y="0.168367" />
+                            <point x="0.786459" y="0.168367" />
+                            <point x="1" y="0.852041" />
+                            <point x="0" y="0.852041" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.497297" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.328125" y="0.168367" />
+                            <point x="0.786459" y="0.168367" />
+                            <point x="1" y="0.852041" />
+                            <point x="0" y="0.852041" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.328125" y="0.168367" />
+                            <point x="0.786459" y="0.168367" />
+                            <point x="1" y="0.852041" />
+                            <point x="0" y="0.852041" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.328125" y="0.168367" />
+                            <point x="0.786459" y="0.168367" />
+                            <point x="1" y="0.852041" />
+                            <point x="0" y="0.852041" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.328125" y="0.168367" />
+                            <point x="0.786459" y="0.168367" />
+                            <point x="1" y="0.852041" />
+                            <point x="0" y="0.852041" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.328125" y="0.168367" />
+                            <point x="0.786459" y="0.168367" />
+                            <point x="1" y="0.852041" />
+                            <point x="0" y="0.852041" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -1102,6 +1203,8 @@
         <file name="passinhoPombo.ogg" />
         <file name="Siren_Noise-KevanGC-1337458893.m4a" />
         <file name="Siren_Noise-KevanGC-1337458893.ogg" />
+        <file name="Witch Cackle 03.m4a" />
+        <file name="Witch Cackle 03.ogg" />
     </sounds-folder>
     <music-folder />
     <files-folder>
