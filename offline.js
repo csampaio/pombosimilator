@@ -1,5 +1,5 @@
 ﻿{
-	"version": 1486158061,
+	"version": 1486186420,
 	"fileList": [
 		"data.js",
 		"c2runtime.js",
@@ -45,6 +45,9 @@
 		"images/vulture-sheet0.png",
 		"images/vulture-sheet1.png",
 		"images/vulture-sheet2.png",
+		"images/bruxa-sheet0.png",
+		"images/bruxa-sheet1.png",
+		"images/bruxa-sheet2.png",
 		"media/audiobg.ogg",
 		"media/cork.ogg",
 		"media/poopsplat.ogg",
@@ -53,6 +56,8 @@
 		"media/passinhopombo.ogg",
 		"media/siren_noise-kevangc-1337458893.m4a",
 		"media/siren_noise-kevangc-1337458893.ogg",
+		"media/witch cackle 03.m4a",
+		"media/witch cackle 03.ogg",
 		"icon-16.png",
 		"icon-32.png",
 		"icon-114.png",

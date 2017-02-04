@@ -1,5 +1,5 @@
 ﻿CACHE MANIFEST
-#1486158061
+#1486186420
 data.js
 c2runtime.js
 jquery-2.1.1.min.js
@@ -44,6 +44,9 @@ images/lovebar-sheet0.png
 images/vulture-sheet0.png
 images/vulture-sheet1.png
 images/vulture-sheet2.png
+images/bruxa-sheet0.png
+images/bruxa-sheet1.png
+images/bruxa-sheet2.png
 media/audiobg.ogg
 media/cork.ogg
 media/poopsplat.ogg
@@ -52,6 +55,8 @@ media/dovescooing.ogg
 media/passinhopombo.ogg
 media/siren_noise-kevangc-1337458893.m4a
 media/siren_noise-kevangc-1337458893.ogg
+media/witch%20cackle%2003.m4a
+media/witch%20cackle%2003.ogg
 icon-16.png
 icon-32.png
 icon-114.png
