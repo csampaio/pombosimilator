@@ -445,6 +445,20 @@
                     <frame duration="1" hotspotX="0.506024" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.506024" hotspotY="0.5" />
                 </animation>
+                <animation framecount="1" loop="0" name="Catched" pingpong="0" repeatcount="1" repeatto="0" sid="272833422912160" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\projetos\PosUEA\pombosimulator\Assets\pombo_pego_asset.png">
+                        <collision-poly>
+                            <point x="0.304878" y="0.403226" />
+                            <point x="0.5" y="0.0483871" />
+                            <point x="0.890244" y="0.145161" />
+                            <point x="0.926829" y="0.5" />
+                            <point x="0.878049" y="0.83871" />
+                            <point x="0.5" y="0.919355" />
+                            <point x="0.146341" y="0.806452" />
+                            <point x="0.0243902" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
             </animation-folder>
         </object-type>
         <object-type name="Sidewalk" sid="481776294407678">

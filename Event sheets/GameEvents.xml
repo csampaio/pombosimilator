@@ -385,6 +385,9 @@
                                 </action>
                                 <action id="-26" name="Restart layout" sid="168707016100331" type="System" />
                                 <action id="-21" name="Reset global variables" sid="539434247523727" type="System" />
+                                <action id="-13" name="Set time scale" sid="591017727923399" type="System">
+                                    <param id="0" name="Time scale">1</param>
+                                </action>
                             </actions>
                         </event-block>
                     </sub-events>
@@ -397,7 +400,7 @@
                         <condition id="-14" name="Compare variable" sid="911565364417045" type="System">
                             <param id="0" name="Variable">energy</param>
                             <param id="1" name="Comparison">4</param>
-                            <param id="2" name="Value">decrementEnergyRate</param>
+                            <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -429,7 +432,12 @@
                         <condition id="-14" name="Compare variable" sid="376128844770428" type="System">
                             <param id="0" name="Variable">energy</param>
                             <param id="1" name="Comparison">3</param>
-                            <param id="2" name="Value">decrementEnergyRate</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="506218546650749" type="System">
+                            <param id="0" name="Variable">gameover</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -437,6 +445,9 @@
                         <action id="0" name="Call function" sid="932209421573242" type="Function">
                             <param id="0" name="Name">&quot;gameover&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="6" name="Stop" sid="381644071414180" type="Audio">
+                            <param id="0" name="Tag">&quot;LowEnergy&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -459,9 +470,6 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="0" name="Set text" sid="314290195765995" type="energyText">
-                            <param id="0" name="Text">&quot;Energy: &quot;&amp;energy&amp;&quot;%&quot;</param>
-                        </action>
                         <action id="-5" name="Set width" sid="649732580290671" type="energyBar">
                             <param id="0" name="Width">energy</param>
                         </action>
@@ -669,6 +677,10 @@
                         </action>
                         <action id="0" name="Set text" sid="995228106996277" type="flightHeightTxt">
                             <param id="0" name="Text">int(Pombo.FlightHeight/85) &amp; &quot;,&quot; &amp; floor(Pombo.FlightHeight%85) &amp; &quot;m&quot;</param>
+                        </action>
+                        <action id="0" name="Call function" sid="156847913537313" type="Function">
+                            <param id="0" name="Name">&quot;updateEnergy&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
                         </action>
                     </actions>
                 </event-block>
@@ -892,38 +904,60 @@
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">1</param>
                         </condition>
-                        <condition id="-8" name="Compare two values" sid="110889562323303" type="System">
-                            <param id="0" name="First value">distance(Bruxa.X,Bruxa.Y,Pombo.X,Pombo.Y)</param>
-                            <param id="1" name="Comparison">4</param>
-                            <param id="2" name="Second value">0</param>
-                        </condition>
-                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="400442738312363" type="Bruxa">
-                            <param id="0" name="Instance variable">CachedPombo</param>
-                        </condition>
                     </conditions>
-                    <actions>
-                        <action id="-21" name="Rotate toward position" sid="982764547359495" type="Bruxa">
-                            <param id="0" name="Degrees">1</param>
-                            <param id="1" name="X">Pombo.X</param>
-                            <param id="2" name="Y">Pombo.Y</param>
-                        </action>
-                        <action id="-17" name="Move forward" sid="291302480279383" type="Bruxa">
-                            <param id="0" name="Distance">5</param>
-                        </action>
-                    </actions>
+                    <actions />
                     <sub-events>
-                        <event-block sid="137674981350415">
+                        <event-block sid="161401530686018">
                             <conditions>
-                                <condition id="5" inverted="1" name="Is tag playing" sid="685629713792293" type="Audio">
-                                    <param id="0" name="Tag">&quot;Bruxa&quot;</param>
+                                <condition id="-8" name="Compare two values" sid="110889562323303" type="System">
+                                    <param id="0" name="First value">distance(Bruxa.X,Bruxa.Y,Pombo.X,Pombo.Y)</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="400442738312363" type="Bruxa">
+                                    <param id="0" name="Instance variable">CachedPombo</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="0" name="Play" sid="634161722174311" type="Audio">
-                                    <param id="0" name="Audio file">Witch Cackle 03</param>
-                                    <param id="2" name="Loop">0</param>
-                                    <param id="3" name="Volume">-10</param>
-                                    <param id="1" name="Tag (optional)">&quot;Bruxa&quot;</param>
+                                <action id="-21" name="Rotate toward position" sid="982764547359495" type="Bruxa">
+                                    <param id="0" name="Degrees">1</param>
+                                    <param id="1" name="X">Pombo.X</param>
+                                    <param id="2" name="Y">Pombo.Y</param>
+                                </action>
+                                <action id="-17" name="Move forward" sid="291302480279383" type="Bruxa">
+                                    <param id="0" name="Distance">5</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="137674981350415">
+                                    <conditions>
+                                        <condition id="5" inverted="1" name="Is tag playing" sid="685629713792293" type="Audio">
+                                            <param id="0" name="Tag">&quot;Bruxa&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="634161722174311" type="Audio">
+                                            <param id="0" name="Audio file">Witch Cackle 03</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">-10</param>
+                                            <param id="1" name="Tag (optional)">&quot;Bruxa&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="361819938170961">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="843577998710750" type="System">
+                                    <param id="0" name="Variable">energy</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Subtract from" sid="405360266508332" type="System">
+                                    <param id="0" name="Variable">energy</param>
+                                    <param id="1" name="Value">1</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -936,6 +970,10 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="4" name="Set animation" sid="638866005560714" type="Pombo">
+                            <param id="0" name="Animation">&quot;Catched&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
                         <action id="-9" name="Set value" sid="506680388378725" type="System">
                             <param id="0" name="Variable">gameover</param>
                             <param id="1" name="Value">1</param>
