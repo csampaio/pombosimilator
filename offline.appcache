@@ -1,5 +1,5 @@
 ﻿CACHE MANIFEST
-#1486186420
+#1486217819
 data.js
 c2runtime.js
 jquery-2.1.1.min.js
@@ -8,8 +8,6 @@ images/background-sheet0.png
 images/people-sheet0.png
 images/people-sheet1.png
 images/pombo-sheet0.png
-images/pombo-sheet1.png
-images/pombo-sheet2.png
 images/sidewalk.png
 images/poop-sheet0.png
 images/boundary-sheet0.png
@@ -47,6 +45,10 @@ images/vulture-sheet2.png
 images/bruxa-sheet0.png
 images/bruxa-sheet1.png
 images/bruxa-sheet2.png
+images/cutscene-sheet0.png
+images/cutscene-sheet1.png
+images/cutscene-sheet2.png
+images/cutscene-sheet3.png
 media/audiobg.ogg
 media/cork.ogg
 media/poopsplat.ogg
@@ -57,6 +59,10 @@ media/siren_noise-kevangc-1337458893.m4a
 media/siren_noise-kevangc-1337458893.ogg
 media/witch%20cackle%2003.m4a
 media/witch%20cackle%2003.ogg
+media/bone%20crushing.m4a
+media/bone%20crushing.ogg
+media/minnie%20riperton%20-%20lovin%20you%20(live).m4a
+media/minnie%20riperton%20-%20lovin%20you%20(live).ogg
 icon-16.png
 icon-32.png
 icon-114.png
