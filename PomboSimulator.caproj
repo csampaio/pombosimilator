@@ -757,7 +757,7 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="220736998006428" speed="5">
-                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="E:\games\pombosimulator\Assets\tela_credits.png" />
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="E:\projetos\PosUEA\pombosimulator\Assets\tela_credits.png" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -1173,17 +1173,28 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="CutScene" sid="476521864832339">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="4" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="747544611480144" speed="0.2">
+                    <frame duration="1" hotspotX="0.470866" hotspotY="0.503145" />
+                    <frame duration="1" hotspotX="0.478331" hotspotY="0.50317" original-source="E:\projetos\PosUEA\pombosimulator\Assets\quadrinhos2.png" />
+                    <frame duration="1" hotspotX="0.468085" hotspotY="0.50384" />
+                    <frame duration="1" hotspotX="0.4687" hotspotY="0.486977" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
         <layout>HomeLayout.xml</layout>
         <layout>GameLayout.xml</layout>
-        <layout>Home.xml</layout>
+        <layout>CutScene.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>GameEvents.xml</event-sheet>
         <event-sheet>HomeEvents.xml</event-sheet>
-        <event-sheet>Home.xml</event-sheet>
+        <event-sheet>CutSceneEvents.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Mouse" uid="16" />
@@ -1220,7 +1231,10 @@
         <file name="Witch Cackle 03.m4a" />
         <file name="Witch Cackle 03.ogg" />
     </sounds-folder>
-    <music-folder />
+    <music-folder>
+        <file name="Minnie Riperton - Lovin You (live).m4a" />
+        <file name="Minnie Riperton - Lovin You (live).ogg" />
+    </music-folder>
     <files-folder>
         <file-folder name="Icons">
             <file name="icon-16.png" />

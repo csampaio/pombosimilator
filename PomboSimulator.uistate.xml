@@ -11,9 +11,11 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </configurations>
     <open-tabs>
         <layout order="0">HomeLayout</layout>
-        <layout active="1" order="2">GameLayout</layout>
+        <layout order="2">GameLayout</layout>
+        <layout order="4">CutScene</layout>
         <event-sheet order="1">HomeEvents</event-sheet>
         <event-sheet order="3">GameEvents</event-sheet>
+        <event-sheet active="1" order="5">CutSceneEvents</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -58,5 +60,6 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/LoveBar/" />
         <folder expanded="1" path="animation-folder/Vulture/" />
         <folder expanded="1" path="animation-folder/Bruxa/" />
+        <folder expanded="1" path="animation-folder/CutScene/" />
     </folders-expanded>
 </c2uistate>
